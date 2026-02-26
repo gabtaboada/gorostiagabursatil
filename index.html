@@ -1,21 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gorostiaga Bursátil</title>
-    <link rel="stylesheet" href="./assets/css/estilo.css">
-    <script src="./assets/js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gorostiaga Bursátil – Tu aliado en el mercado de capitales</title>
+  <link rel="stylesheet" href="./assets/css/estilo.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="./assets/js/app.js" defer></script>
 </head>
+
 <body>
-    <header>
 
-    </header>
-    <main>
+  <!-- ═══════════════════ HEADER ═══════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
 
-    </main>
-    <footer>
-        
-    </footer>
+      <a href="/" class="logo-link">
+        <img src="./assets/img/logoGorostiaga.png"
+          onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';"
+          alt="Gorostiaga Bursátil" class="logo-img" />
+        <span id="logo-text" class="logo-text" style="display:none;">Gorostiaga Bursátil</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#abrir-cuenta" class="nav-link">Abrir Cuenta</a>
+        <a href="#instagram" class="nav-link">Instagram</a>
+        <a href="#youtube" class="nav-link">YouTube</a>
+        <a href="https://inversor.inviu.com.ar/login" target="_blank" class="nav-link">Acceso a clientes</a>
+        <a href="https://play.google.com/store/apps/details?id=io.igam.inviu.investor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          target="_blank" class="nav-cta">
+          <i class="fa-brands fa-google-play"></i> Descargar App
+        </a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Overlay menú mobile -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- ═══════════════════ HERO – EN CONSTRUCCIÓN ═══════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🚧 Sitio en renovación</span>
+      <h1 class="hero-title">
+        Estamos construyendo<br />algo mucho mejor para vos
+      </h1>
+      <p class="hero-subtitle">
+        Nuestro equipo está trabajando para darte una experiencia más completa, clara y potente.
+        Muy pronto vas a encontrar aquí todo lo que necesitás para invertir con confianza en el mercado de capitales
+        argentino.
+        Mientras tanto, podés abrir tu cuenta desde la app y empezar a operar hoy mismo.
+      </p>
+      <div class="hero-actions">
+        <a href="#abrir-cuenta" class="btn-primary">Abrir mi cuenta</a>
+        <a href="https://play.google.com/store/apps/details?id=io.igam.inviu.investor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" class="btn-ghost">Descargar App →</a>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <div class="chart-visual">
+        <svg viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+          <polyline points="0,150 50,120 100,130 150,80 200,90 250,40 300,50" stroke="url(#lineGrad)" stroke-width="3"
+            fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          <polyline points="0,150 50,120 100,130 150,80 200,90 250,40 300,50 300,180 0,180" fill="url(#areaGrad)" />
+          <defs>
+            <linearGradient id="lineGrad" x1="0" y1="0" x2="300" y2="0">
+              <stop offset="0%" stop-color="#ff6b0f"></stop>
+              <stop offset="100%" stop-color="#ff8c3a"></stop>
+            </linearGradient>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="180">
+              <stop offset="0%" stop-color="#ff6b0f" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#ff6b0f" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABRIR CUENTA ═══════════════════ -->
+  <section class="open-account" id="abrir-cuenta">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Empezá ahora</span>
+        <h2 class="section-title">Abrí tu cuenta en minutos</h2>
+        <p class="section-desc">Seguí estos simples pasos desde tu celular y comenzá a invertir hoy mismo.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon"><i class="fa-brands fa-google-play"></i></div>
+          <h3>Descargá la app</h3>
+          <p>Instalá la aplicación en tu celular desde Google Play Store.</p>
+          <a href="https://play.google.com/store/apps/details?id=io.igam.inviu.investor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            target="_blank" class="step-link">Ir a Play Store →</a>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon"><i class="fa-solid fa-at"></i></div>
+          <h3>Ingresá el alias</h3>
+          <p>En el campo de alias de asesor escribí: <strong>GOROSTIAGABURSATIL.INVIU</strong> y creá tu cuenta.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon"><i class="fa-solid fa-envelope"></i></div>
+          <h3>Confirmá tu mail</h3>
+          <p>Te vamos a enviar un correo electrónico para confirmar tus datos personales.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-icon"><i class="fa-solid fa-id-card"></i></div>
+          <h3>Escaneá tu DNI</h3>
+          <p>Fotografiá el frente y el dorso de tu DNI desde la propia app de forma segura.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">05</div>
+          <div class="step-icon"><i class="fa-solid fa-camera"></i></div>
+          <h3>Sacate una selfie</h3>
+          <p>Verificamos tu identidad con un reconocimiento facial rápido y seguro.</p>
+        </div>
+
+        <div class="step-card highlight-card">
+          <div class="step-num">06</div>
+          <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>¡Completá y listo!</h3>
+          <p>Cargá tus datos personales y ya podés empezar a invertir en el mercado de capitales.</p>
+        </div>
+      </div>
+
+      <!-- Download badge -->
+      <div class="download-section">
+        <p class="download-label">Disponible en</p>
+        <a href="https://play.google.com/store/apps/details?id=io.igam.inviu.investor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          target="_blank">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es-419_badge_web_generic.png"
+            alt="Disponible en Google Play" class="play-badge" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ INSTAGRAM FEED ═══════════════════ -->
+  <section class="instagram-section" id="instagram"> <div class="container"> <div class="section-header"> <span class="section-label"><i class="fa-brands fa-instagram"></i> @gorostiagabursatil</span> <h2 class="section-title">Seguinos en Instagram</h2> <p class="section-desc">Contenido diario sobre inversiones, mercados y economía argentina.</p> </div> 
+    
+    <!-- Widget de Elfsight o enlace directo --> 
+  <div class="instagram-widget-wrap"> 
+    <!-- Elfsight Instagram Feed | Untitled Instagram Feed --> 
+
+      <!-- <div class="elfsight-app-2e3a7477-1412-4080-9b76-7d555880aa50" data-elfsight-app-lazy></div>  -->
+    <!-- <iframe src="https://www.instagram.com/gorostiagabursatil/embed" width="100%" height="800" frameborder="0" scrolling="no"> 
+
+    </iframe>  -->
+    
+    <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-2e3a7477-1412-4080-9b76-7d555880aa50" data-elfsight-app-lazy></div>
+    </div> 
+  </div> 
+  </section>
+
+  <!-- ═══════════════════ YOUTUBE ═══════════════════ -->
+  <section class="youtube-section" id="youtube">
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-label"><i class="fa-brands fa-youtube"></i> Canal de YouTube</span>
+        <h2 class="section-title">Últimas novedades en video</h2>
+        <p class="section-desc">Mirá el último video de nuestra lista de reproducción.</p>
+      </div>
+
+      <div class="video-wrap" id="video-wrap">
+        <div class="video-loader">Cargando video…</div>
+      </div>
+
+      <div class="yt-cta">
+        <a href="https://www.youtube.com/playlist?list=PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD" target="_blank"
+          class="btn-youtube">
+          <i class="fa-brands fa-youtube"></i> Ver toda la playlist
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- Columna 1: Marca -->
+      <div class="footer-brand">
+        <img src="./assets/img/logoGorostiaga.png"
+          onerror="this.style.display='none'; document.getElementById('footer-logo-text').style.display='block';"
+          alt="Gorostiaga Bursátil" class="footer-logo" />
+        <span id="footer-logo-text" class="logo-text" style="display:none;">Gorostiaga Bursátil</span>
+        <p class="footer-tagline">Tu aliado en el mercado<br />de capitales argentino.</p>
+
+        <!-- Redes sociales – solo íconos en fila -->
+        <p class="footer-social-label">Seguinos</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/gorostiagabursatil/" target="_blank" aria-label="Instagram" class="social-icon-btn">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/people/Gorostiaga-Burs%C3%A1til/100089791860812/" target="_blank" aria-label="Facebook" class="social-icon-btn">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/Gorostiaga_" target="_blank" aria-label="X / Twitter" class="social-icon-btn">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/gorostiaga-burs%C3%A1til/" target="_blank" aria-label="LinkedIn" class="social-icon-btn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com/playlist?list=PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD" target="_blank" aria-label="YouTube" class="social-icon-btn">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=io.igam.inviu.investor" target="_blank" aria-label="App Android" class="social-icon-btn">
+            <i class="fa-brands fa-google-play"></i>
+          </a>
+        </div>
+
+        <!-- Sello AFIP -->
+        <div class="afip-badge">
+          <a href="http://qr.afip.gob.ar/?qr=r1aki1glZXGUZl7dq-jyvQ,," target="_F960AFIPInfo"
+            title="Datos fiscales AFIP">
+            <img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"
+              alt="Datos fiscales AFIP" border="0" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#abrir-cuenta">Abrir Cuenta</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+          <li><a href="#youtube">YouTube</a></li>
+          <li><a href="https://inversor.inviu.com.ar/login" target="_blank">Acceso a clientes</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Documentos legales (PDFs) -->
+      <div class="footer-links">
+        <h4>Documentos</h4>
+        <ul>
+          <li>
+            <a href="#" class="pdf-link" onclick="abrirPDF('./assets/pdf/CodigoDeConducta.pdf', 'Código de Conducta'); return false;">
+              <i class="fa-regular fa-file-pdf"></i> Código de Conducta
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pdf-link" onclick="abrirPDF('./assets/pdf/RegistroDeIdoneos.pdf', 'Registro de Idóneos'); return false;">
+              <i class="fa-regular fa-file-pdf"></i> Registro de Idóneos
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pdf-link" onclick="abrirPDF('./assets/pdf/TablaDeAranceles.pdf', 'Tabla de Aranceles'); return false;">
+              <i class="fa-regular fa-file-pdf"></i> Tabla de Aranceles
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pdf-link" onclick="abrirPDF('./assets/pdf/Terminosycondiciones.pdf', 'Términos y Condiciones'); return false;">
+              <i class="fa-regular fa-file-pdf"></i> Términos y Condiciones
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Regulatorio -->
+      <div class="footer-links">
+        <h4>Regulatorio CNV</h4>
+        <ul>
+          <li>
+            <a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Registro Público CNV
+            </a>
+          </li>
+          <li>
+            <a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Marco Regulatorio CNV
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos/Idoneos" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Agentes Autorizados CNV
+            </a>
+          </li>
+          <li>
+            <a href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Defensa al Consumidor
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Gorostiaga Bursátil. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ MODAL PDF ═══════════════════ -->
+  <div class="pdf-modal" id="pdf-modal" role="dialog" aria-modal="true">
+    <div class="pdf-modal-box">
+      <div class="pdf-modal-header">
+        <h3 class="pdf-modal-title" id="pdf-modal-title">Documento</h3>
+        <div class="pdf-modal-actions">
+          <a href="#" id="pdf-download-btn" download class="pdf-btn-download" title="Descargar">
+            <i class="fa-solid fa-download"></i> Descargar
+          </a>
+          <button class="pdf-btn-close" onclick="cerrarPDF()" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="pdf-modal-body">
+        <iframe id="pdf-iframe" src="" title="Visor de documento"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ WHATSAPP FLOTANTE ═══════════════════ -->
+  <a href="https://wa.me/5491131388504?text=Hola%2C%20me%20comunico%20desde%20el%20sitio%20web%20de%20Gorostiaga%20Burs%C3%A1til.%20Quisiera%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20abrir%20mi%20cuenta%20y%20comenzar%20a%20invertir.%20%C2%BFPodr%C3%ADan%20asesorarme%3F"
+    class="wa-float" target="_blank" rel="noopener" aria-label="Contactanos por WhatsApp">
+    <span class="wa-tooltip">¿Querés invertir?<br />¡Escribinos!</span>
+    <div class="wa-icon-wrap">
+      <i class="fa-brands fa-whatsapp"></i>
+    </div>
+    <div class="wa-pulse"></div>
+  </a>
+
 </body>
+
 </html>

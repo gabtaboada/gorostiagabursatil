@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ – Preguntas Frecuentes | Gorostiaga Bursátil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0b1829;
+      --navy-mid: #122240;
+      --gold: #c8a96e;
+      --gold-light: #f0d080;
+      --border: rgba(200,169,110,0.2);
+      --text-muted: #8fa3bf;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: #fff;
+      padding: 60px 24px;
+      line-height: 1.65;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 48px;
+    }
+
+    /* FAQ item */
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: border-color 0.25s ease;
+    }
+    .faq-item.open { border-color: rgba(200,169,110,0.45); }
+
+    .faq-question {
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      text-align: left;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+    .faq-question:hover { background: rgba(200,169,110,0.06); }
+    .faq-item.open .faq-question { background: rgba(200,169,110,0.07); }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--gold);
+      transition: transform 0.3s ease, background 0.2s ease;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(200,169,110,0.15);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s ease;
+      padding: 0 24px;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding: 4px 24px 22px;
+    }
+    .faq-answer p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.75;
+    }
+    .faq-answer a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Preguntas frecuentes</h1>
+  <p class="subtitle">Todo lo que necesitás saber antes de invertir con nosotros.</p>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cómo abro una cuenta?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Para abrir su cuenta con nosotros, siga los pasos detallados en la sección <a href="https://gorostiagabursatil.com/abrir-cuenta/" target="_blank">ABRIR CUENTA</a>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿La apertura tiene algún costo?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Abrir su cuenta en Gorostiaga Bursátil no tiene costo alguno.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cuánto demora la apertura de cuenta?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Por lo general es inmediata, pero puede demorar hasta 48 hs. en casos excepcionales.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Hay un monto mínimo de inversión?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>No hay montos mínimos para operar. Podrás realizar tus inversiones por los montos que desees desde la plataforma.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cuáles son los aranceles?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Encontrá toda la información arancelaria en el apartado de la página de inversiones.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cómo empiezo a invertir?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Simple: abrí tu cuenta con nosotros, ingresá fondos y operá desde la plataforma, o contactate con uno de nuestros Asesores Financieros para definir tu cartera de inversión.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Es necesario tener conocimiento de finanzas para invertir en la Bolsa?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>No es necesario poseer conocimientos sobre finanzas para invertir en la Bolsa. Cuando operás con nosotros, contás con el asesoramiento de expertos profesionales en la materia para resolver tus inquietudes y ayudarte a entender con explicaciones claras cómo trabajan los mercados.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Puedo protegerme de la inflación realizando inversiones?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sí. Al aumentar el precio de los bienes y servicios aumentan también los ingresos de las empresas que los producen. Por lo tanto, suben sus beneficios y el valor de sus inversiones, generalmente por sobre el nivel de la inflación.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cuál es el precio de las acciones de una empresa?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>El precio de las acciones varía en función de la oferta y la demanda. Además de los dividendos (pagos de ganancias a los accionistas) a los que tenés derecho por poseer las acciones, podrás ganar dinero si vendés por un valor mayor al que compraste.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Qué son los dividendos?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Cuando una empresa obtiene beneficios, la dirección decide si los reinvierte en el negocio o los paga a los accionistas en forma de dividendos. Por lo general, las empresas que pagan dividendos en efectivo lo hacen semestralmente, aunque en ocasiones pueden decidir pagar un dividendo extraordinario.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿En qué moneda se operan los CEDEAR?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Podés comprar y vender los CEDEARs de Acciones y ETF tanto en pesos como en dólares.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cómo funciona la cobertura de los CEDEAR contra la devaluación del peso argentino?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Si bien la cotización del CEDEAR depende de la libre interacción entre oferta y demanda, su precio está directamente relacionado a tres factores: la cotización de la acción en su mercado de origen (en dólares), la cotización del dólar implícito "Contado con Liquidación" (CCL) y su ratio de conversión. Por otra parte, cualquier movimiento del CCL también repercutirá directamente en la cotización de tu CEDEAR.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cómo calculo la cotización del Dólar MEP?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>La cotización del Dólar MEP es el resultado de dividir el precio del activo en pesos al momento de comprarlo, por el precio del activo en dólares al momento de venderlo.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Cuál es la diferencia entre Dólar MEP y Dólar Contado Con Liquidación?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p><strong style="color:#c8a96e">Dólar MEP (o Dólar Bolsa):</strong> consiste en la compra de un bono en pesos y su posterior venta en dólares, en especie "D", en el mercado local.<br><br>
+        <strong style="color:#c8a96e">Dólar CCL (Contado Con Liquidación):</strong> consiste en la compra de un bono con pesos y su posterior venta en dólares, en especie "C", en el mercado de Estados Unidos. Para invertir en Dólar CCL es necesario contar con una cuenta en el extranjero, donde se liquidará el saldo resultante.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Con qué bonos puedo hacer Dólar MEP?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Podés operar Dólar MEP con cualquier bono que cotice tanto en pesos como en dólares (especie D). Por ejemplo: Bonos AL30 y GD30, cuyas especies en dólares son AL30D y GD30D.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Qué es el parking?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Parking es el término que se utiliza en el mercado para referirse a la cantidad de días hábiles que un inversor debe mantener los títulos comprados en su portafolio desde el momento de su liquidación, antes de poder venderlos.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        ¿Qué diferencia tienen las ONs con un bono público?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>La única diferencia es que las Obligaciones Negociables (ONs) son emitidas por entidades privadas, mientras que los bonos públicos son emitidos por entes públicos.</p>
+      </div>
+    </div>
+
+  </div><!-- /.faq-list -->
+</div><!-- /.container -->
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Cerrar todos
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      // Abrir el clickeado si estaba cerrado
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
