@@ -650,7 +650,37 @@ ul {
   line-height: 1.7;
   margin-bottom: 24px;
 }
-
+/* ─── FOOTER CONTACT ─── */
+.footer-contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 24px;
+}
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.footer-contact li i {
+  color: var(--off-white);
+  font-size: 0.82rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+.footer-contact li a {
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+.footer-contact li a:hover {
+  color: var(--gold);
+}
 .social-links-old-ref {
   /* reemplazado por .social-link-item */
 }
@@ -692,7 +722,12 @@ ul {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.25);
 }
-
+.iconos-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
 /* ─── ANIMATIONS ─── */
 @keyframes fadeUp {
   from {
@@ -1087,23 +1122,24 @@ ul {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--border);
+  /* background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border); */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.55);
   transition: var(--transition);
   flex-shrink: 0;
+  margin: 0 10px;
 }
 
 .social-icon-btn:hover {
-  background: var(--gold);
-  color: var(--navy);
-  border-color: var(--gold);
+  /* background: var(--gold); */
+  color: var(--off-white);
+  /* border-color: var(--gold); */
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 107, 15, 0.3);
+  box-shadow: 0 4px 12px rgba(109, 94, 48, 0.516);
 }
 
 /* ─── BADGE AFIP ─── */
