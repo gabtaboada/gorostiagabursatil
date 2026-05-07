@@ -8,7 +8,8 @@
     <title>Gorostiaga Bursátil | Inversiones Inteligentes</title>
     <meta name="description"
         content="Tu experiencia de inversión comienza con Gorostiaga Bursátil. Asesoramiento experto en Acciones, Bonos, CEDEARs y más.">
-    <meta name="keywords" content="Gorostiaga Bursátil, agente CNV, inversiones Argentina, acciones, bonos, CEDEARs, dólar MEP, mercado de capitales, asesoramiento financiero, abrir cuenta comitente">
+    <meta name="keywords"
+        content="Gorostiaga Bursátil, agente CNV, inversiones Argentina, acciones, bonos, CEDEARs, dólar MEP, mercado de capitales, asesoramiento financiero, abrir cuenta comitente">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,15 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="estilo.css">
-    <script src="main.js" defer></script>
+    <!-- Estilos -->
+    <!-- Libreria Aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/estilo.css">
+
+    <!-- JS -->
+    <!--libreria Aos-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js" defer></script>
     <style>
 
     </style>
@@ -31,26 +38,25 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Gorostiaga Bursátil Logo" class="logo-img">
+                <img src="./assets/img/logo.png" alt="Gorostiaga Bursátil Logo" class="logo-img">
             </a>
 
-            <nav class="nav">
+            <nav class="nav header-menu">
                 <ul class="nav-list">
+                    <li><a href="#" class="">Finanzas</a></li>
+                    <li><a href="./pages/quienes-somos.html" class="">Quienes somos</a></li>
+                    <li><a href="#" class="">Plataforma</a></li>
+                    <li><a href="#" class="">Aprende</a></li>
                 </ul>
             </nav>
-
             <div class="header-actions">
 
-                <a href="abrir-cuenta.html" class="btn btn-primary">Abrir Cuenta</a>
-                <!-- <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/" class="btn btn-outline" target="_blank">ACCESO CLIENTES</a> -->
+                <a href="./pages/abrir-cuenta.html" class="btn btn-primary">Abrir Cuenta</a>
                 <a href="https://inversor.inviu.com.ar/login" class="btn btn-outline" target="_blank">CUENTA INVIU</a>
-
-
-
                 <!-- RosVal Dropdown -->
                 <div class="rosval-dropdown" id="rosvalDropdown">
                     <button class="rosval-btn">
-                        <img src="images/rosario_valores.png" alt="RosVal" class="rosval-logo">
+                        <img src="./assets/img/rosario_valores.png" alt="logo Rosario valores" class="rosval-logo">
                         <i class="fa-solid fa-chevron-down arrow"></i>
                     </button>
                     <div class="rosval-menu">
@@ -76,17 +82,17 @@
     <div class="mobile-menu">
         <div class="mobile-menu-header">
             <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
-            <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+            <button  class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <ul class="mobile-nav-list">
             <li><a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">Ingresar</a></li>
-            <!-- <li><a href="abrir-cuenta.html" class="btn btn-primary mobile-cta">Abrir Cuenta</a></li> -->
+
             <li style="margin-top:1rem; padding-top:1rem; border-top: 1px solid #e2e8f0;">
                 <!-- <p style="font-size:0.75rem; color:#64748b; font-weight:600; text-transform:uppercase; margin-bottom:0.75rem; letter-spacing:0.05em;">RosVal</p> -->
-            <div class="mobile-rosval-logo">
-                <img src="images/rosario_valores.png" alt="RosVal">
-                <span>RosVal</span>
-            </div>
+                <div class="mobile-rosval-logo">
+                    <img src="./assets/img/rosario_valores.png" alt="logo Rosario valores">
+                    <span>RosVal</span>
+                </div>
                 <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
                     target="_blank"
                     style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
@@ -120,7 +126,7 @@
             </div>
         </section>
 
-        <!-- Opening Account Section -->
+        <!-- Seccion empeza a invertir hoy -->
         <section class="cta-section section-padding">
             <div class="container">
                 <div class="cta-box">
@@ -129,9 +135,28 @@
                         <p>Abrí tu cuenta 100% online y sin costos de mantenimiento.</p>
                     </div>
                     <div class="cta-actions">
-                        <a href="abrir-cuenta.html" class="btn btn-white">Abrir Cuenta Gratis</a>
+                        <a href="./pages/abrir-cuenta.html" class="btn btn-white">Abrir Cuenta Gratis</a>
                         <span class="cta-note">Demora menos de 5 minutos</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion celular - plataforma inviu-->
+        <section class="cta-section section-padding">
+            <div class="container plataforma-msj">
+                <div class="texto-plataforma" >
+                    <p>Nuestro equipo está trabajando para darte una experiencia más completa, clara y potente. Muy
+                        pronto vas a encontrar aquí todo lo que necesitás para invertir con confianza en el mercado de
+                        capitales argentino. Mientras tanto, podés abrir tu cuenta desde la app y empezar a operar hoy
+                        mismo.
+                    </p>
+                </div>
+                <div class="msj-celular">
+                    <img src="./assets/img/inviu-presentation.png" class="inviu-celular" alt="Asesor" id="asesor"  data-aos="zoom-in" >
+
+                    <img src="./assets/img/inviu-msj-presentation.png" class="inviu-msj" alt="Mensaje" id="mensaje" data-aos="zoom-in"
+                        >
                 </div>
             </div>
         </section>
@@ -173,8 +198,8 @@
                 </div>
 
                 <div class="yt-cta">
-                    <a href="https://www.youtube.com/playlist?list=PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD"
-                        target="_blank" class="yt-playlist-btn">
+                    <a href="https://www.youtube.com/playlist?list=PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD" target="_blank"
+                        class="yt-playlist-btn">
                         <i class="fa-brands fa-youtube"></i> Ver playlist completa
                     </a>
                 </div>
@@ -187,8 +212,9 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo footer-logo">
-                        <img src="images/logo_footer.png" alt="Logo" class="logo-img">
+                    <a href="./index.html" class="logo footer-logo">
+                        <img src="./assets/img/logo_footer.png" alt="Logo gorostiaga bursatil para footer de la web"
+                            class="logo-img">
                         Gorostiaga<span class="logo-accent">Bursátil</span>
                     </a>
                     <p>Agente de Negociación - Matrícula Nº 1636</p>
@@ -208,9 +234,11 @@
                     <div class="footer-col">
                         <h4>Compañía</h4>
                         <ul>
-                            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                            <li><a href="./pages/quienes-somos.html">Quiénes somos</a></li>
                             <li><a href="#inicio">Actividades</a></li>
-                            <li><a href="/cdn-cgi/l/email-protection#593a36372d383a2d36193e362b362a2d30383e383b2c2b2a382d3035773a3634">Contacto</a></li>
+                            <li><a
+                                    href="/cdn-cgi/l/email-protection#593a36372d383a2d36193e362b362a2d30383e383b2c2b2a382d3035773a3634">Contacto</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -219,15 +247,16 @@
                             <li><a href="#">Acciones</a></li>
                             <li><a href="#">Bonos</a></li>
                             <li><a href="#">CEDEARs</a></li>
-                            <li><a href="archivos/TablaDeAranceles.pdf">Aranceles</a></li>
+                            <li><a href="./assets/documentos/pdf/TablaDeAranceles.pdf">Aranceles</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>Legales</h4>
                         <ul>
-                            <li><a href="archivos/Terminosycondiciones.pdf">Términos y Condiciones</a></li>
-                            <li><a href="archivos/CodigoDeConducta.pdf">Código de Conducta</a></li>
-                            <li><a href="archivos/RegistroDeIdoneos.pdf">Registro de Idóneos</a></li>
+                            <li><a href="./assets/documentos/pdf/Terminosycondiciones.pdf">Términos y Condiciones</a>
+                            </li>
+                            <li><a href="./assets/documentos/pdf/CodigoDeConducta.pdf">Código de Conducta</a></li>
+                            <li><a href="./assets/documentos/pdf/RegistroDeIdoneos.pdf">Registro de Idóneos</a></li>
                             <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos">Registro Púbico</a></li>
                             <li><a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio">Marco
                                     Regulatorio</a></li>
@@ -252,8 +281,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- WhatsApp Flotante -->
-    <!-- <a href="https://wa.me/5493412345678" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a> -->
+    <script>
+        AOS.init();
+    </script>
+</body>

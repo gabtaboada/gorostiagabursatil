@@ -140,7 +140,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.193);
     height: 80px;
     display: flex;
     align-items: center;
@@ -292,7 +292,35 @@ img {
     left: 10%;
     animation-delay: 2s;
 }
-
+.plataforma-msj{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;  
+}
+.texto-plataforma{
+    width: 100%;
+}
+.msj-celular{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;      
+}
+.inviu-celular{
+    margin-bottom: -2px;
+}
+.inviu-msj{
+    position: absolute;
+    /* left: 10px;*/
+    top:4.2em;
+    z-index: 2;
+    opacity: 1; 
+    transform: matrix(1, 0, 0, 1, 0, 0);    
+}
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -620,7 +648,7 @@ img {
 
 
 .logo-img {
-    height: 40px;
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
