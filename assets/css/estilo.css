@@ -1436,17 +1436,67 @@ img {
     flex-wrap: wrap;
 }
 
+.map-container {
+    position: relative;
+    width: fit-content;
+}
+
+/* MAPA */
 .argentina-map {
-    width: 320px;
+    width: 200px;
     flex-shrink: 0;
     filter: drop-shadow(0 8px 32px rgba(30, 58, 138, 0.12));
 }
 
 /* Pines del mapa */
+/* PIN */
 .map-pin {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, -50%);
     cursor: pointer;
 }
 
+/* círculo */
+.pin-dot {
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 2px solid #1e3a8a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(30, 58, 138, 0.2);
+    animation: pulse 2s infinite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+/* logo */
+.pin-dot img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+/* Buenos Aires */
+.pin-ba {
+    left: 56%;
+    top: 43%;
+}
+
+/* Santiago del Estero */
+.pin-sgo {
+    left: 41%;
+    top: 16%;
+}
+
+
+/* .map-pin {
+    cursor: pointer;
+}
+ */
 .map-pin circle {
     transition: r 0.2s ease;
 }
@@ -1454,7 +1504,87 @@ img {
 .map-pin:hover circle.pin-outer {
     r: 18;
 }
+.map-tooltip {
+    position: absolute;
 
+    bottom: 38px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(8px);
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    background: rgba(15, 23, 42, 0.96);
+
+    color: white;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+/* flecha */
+.map-tooltip::after {
+    content: "";
+
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 6px;
+    border-style: solid;
+
+    border-color:
+        rgba(15, 23, 42, 0.96)
+        transparent
+        transparent
+        transparent;
+}
+
+/* hover */
+.map-pin:hover .map-tooltip {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+/* Animación */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(30, 58, 138, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(30, 58, 138, 0);
+    }
+}
 /* Leyenda */
 .map-legend {
     display: flex;
