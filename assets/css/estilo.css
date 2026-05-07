@@ -212,12 +212,12 @@ img {
     background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
 }
 
-.hero-container {
+/* .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
-}
+} */
 
 .hero-content h1 {
     font-family: var(--font-heading);
@@ -230,7 +230,7 @@ img {
 .hero-content p {
     font-size: 1.25rem;
     color: var(--text-light);
-    margin-bottom: 2.5rem;
+  //  margin-bottom: 2.5rem;
     max-width: 500px;
 }
 
@@ -292,8 +292,16 @@ img {
     left: 10%;
     animation-delay: 2s;
 }
+.descargas-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    gap: 30px;    
+}
 .plataforma-msj{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
