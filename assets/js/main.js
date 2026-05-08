@@ -65,68 +65,145 @@ if (dropdown) {
     });
 }
 // ─── YouTube: último video de la playlist ───
+// ─── YouTube: último video de cada playlist ───
 document.addEventListener('DOMContentLoaded', function () {
-    const wrap = document.getElementById('yt-player-wrap');
-    if (!wrap) return;
- 
-    const playlistId = 'PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD';
-    const channelUrl = 'https://www.youtube.com/playlist?list=' + playlistId;
- 
-    // Intentamos obtener el último video via RSS (no requiere API key)
-    // YouTube expone un feed público por canal, buscamos el channel ID del canal
-    // Como la playlist es del canal, usamos el primer video de la lista via oembed
-    const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' +
-        encodeURIComponent('https://www.youtube.com/feeds/videos.xml?playlist_id=' + playlistId);
- 
-    fetch(rssUrl)
-        .then(r => r.json())
-        .then(data => {
-            if (data.status === 'ok' && data.items && data.items.length > 0) {
-                const latest = data.items[0];
-                // Extraer video ID del link
-                const match = latest.link.match(/v=([^&]+)/);
-                const videoId = match ? match[1] : null;
- 
-                if (videoId) {
-                    buildPlayer(wrap, videoId, latest.title, channelUrl);
+
+    const players = document.querySelectorAll('.yt-player-wrap');
+
+    if (!players.length) return;
+
+    players.forEach(wrap => {
+
+        const playlistId = wrap.dataset.playlist;
+
+        if (!playlistId) return;
+
+        const channelUrl =
+            'https://www.youtube.com/playlist?list=' + playlistId;
+
+        const rssUrl =
+            'https://api.rss2json.com/v1/api.json?rss_url=' +
+            encodeURIComponent(
+                'https://www.youtube.com/feeds/videos.xml?playlist_id=' + playlistId
+            );
+
+        fetch(rssUrl)
+            .then(r => r.json())
+            .then(data => {
+
+                console.log(data);
+
+                if (
+                    data.status === 'ok' &&
+                    data.items &&
+                    data.items.length > 0
+                ) {
+
+                    const latest = data.items[0];
+
+                    const match =
+                        latest.link.match(/v=([^&]+)/);
+
+                    const videoId =
+                        match ? match[1] : null;
+
+                    if (videoId) {
+
+                        buildPlayer(
+                            wrap,
+                            videoId,
+                            latest.title,
+                            channelUrl
+                        );
+
+                    } else {
+
+                        buildFallback(
+                            wrap,
+                            channelUrl
+                        );
+
+                    }
+
                 } else {
-                    buildFallback(wrap, channelUrl);
+
+                    buildFallback(
+                        wrap,
+                        channelUrl
+                    );
+
                 }
-            } else {
-                buildFallback(wrap, channelUrl);
-            }
-        })
-        .catch(() => buildFallback(wrap, channelUrl));
- 
+
+            })
+            .catch(error => {
+
+                console.error(error);
+
+                buildFallback(
+                    wrap,
+                    channelUrl
+                );
+
+            });
+
+    });
+
     function buildPlayer(wrap, videoId, title, channelUrl) {
-        // Usamos thumbnail clicable que carga el iframe al hacer click (mejor performance)
-        const thumb = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
+        const thumb =
+            `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+
         wrap.innerHTML = `
-            <div class="yt-facade" data-video-id="${videoId}" data-channel="${channelUrl}">
-                <img src="${thumb}" alt="${title || 'Ver video'}" class="yt-thumb"
-                     onerror="this.src='https://img.youtube.com/vi/${videoId}/hqdefault.jpg'">
-                <div class="yt-play-btn" aria-label="Reproducir video">
+            <div class="yt-facade"
+                 data-video-id="${videoId}">
+
+                <img
+                    src="${thumb}"
+                    alt="${title || 'Ver video'}"
+                    class="yt-thumb"
+                    onerror="this.src='https://img.youtube.com/vi/${videoId}/hqdefault.jpg'">
+
+                <div class="yt-play-btn">
                     <i class="fa-solid fa-play"></i>
                 </div>
-                <div class="yt-video-title">${title || ''}</div>
-            </div>`;
- 
-        wrap.querySelector('.yt-facade').addEventListener('click', function () {
-            const id = this.dataset.videoId;
-            wrap.innerHTML = `<iframe
-                src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"
-                title="Video de Gorostiaga Bursátil"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>`;
-        });
+
+                <div class="yt-video-title">
+                    ${title || ''}
+                </div>
+
+            </div>
+        `;
+
+        wrap.querySelector('.yt-facade')
+            .addEventListener('click', function () {
+
+                const id = this.dataset.videoId;
+
+                wrap.innerHTML = `
+                    <iframe
+                        src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"
+                        title="Video de Gorostiaga Bursátil"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                `;
+            });
     }
- 
+
     function buildFallback(wrap, channelUrl) {
+
         wrap.innerHTML = `
-            <a href="${channelUrl}" target="_blank" class="yt-fallback-link">
+            <a href="${channelUrl}"
+               target="_blank"
+               class="yt-fallback-link">
+
                 <i class="fa-brands fa-youtube"></i>
                 <span>Ver videos en YouTube</span>
-            </a>`;
+
+            </a>
+        `;
     }
+
 });
  

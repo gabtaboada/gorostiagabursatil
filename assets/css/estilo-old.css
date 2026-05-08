@@ -242,59 +242,13 @@ img {
 
 /* Hero Section */
 .hero {
-    /* margin-top: 80px; */
+    margin-top: 80px;
+    /* Header height */
     padding: 4rem 0;
     min-height: 80vh;
     display: flex;
     align-items: center;
     background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
-}
-
-/* Hero 100% Gorostiaga – pantalla completa */
-.hero-gorostiaga {
-    min-height: calc(100vh - 80px);
-    position: relative;
-    background:
-        radial-gradient(ellipse 70% 60% at 80% 30%, rgba(59,130,246,0.10) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 50% at 10% 80%, rgba(30,58,138,0.08) 0%, transparent 55%),
-        linear-gradient(160deg, #f0f6ff 0%, #ffffff 60%, #f8faff 100%);
-}
-.hero-bg-overlay {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
-    background-size: 48px 48px;
-    pointer-events: none;
-}
-.hero-centered {
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
-}
-.hero-centered h1 {
-    font-size: clamp(2.4rem, 5.5vw, 4rem);
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-}
-.hero-subtitle {
-    font-size: 1.15rem;
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 0 auto 1.2rem;
-    line-height: 1.75;
-}
-.hero-tagline {
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--primary);
-    margin-bottom: 2.5rem !important;
-}
-.hero-centered .hero-btns {
-    justify-content: center;
 }
 
 /* .hero-container {
@@ -315,8 +269,8 @@ img {
 .hero-content p {
     font-size: 1.25rem;
     color: var(--text-light);
-  /*  margin-bottom: 2.5rem;
-    max-width: 500px;*/
+  //  margin-bottom: 2.5rem;
+    max-width: 500px;
 }
 
 .badge {
@@ -1730,33 +1684,12 @@ img {
 }
 
 /* ═══════════════════ YOUTUBE SECTION ═══════════════════ */
-.contenedor-youtube{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.contenedor-youtube > div {
-    flex: 1 1 350px;
-    max-width: 420px;
-}
 .youtube-section {
     padding: 80px 0;
     background-color: var(--white);
     border-top: 2px solid #e2e8f0;
 }
-.youtube-section h2{
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-}
-.youtube-section h3{
-    text-align: center;
-    font-size: 1.3rem;
-}
+
 .yt-section-header {
     text-align: center;
     margin-bottom: 48px;
@@ -1850,11 +1783,6 @@ img {
             .map-legend { width: 100%; max-width: 400px; }
         }
 @media (max-width: 768px) {
-    .contenedor-youtube{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     .instagram-section {
         padding: 60px 0;
     }
@@ -1874,84 +1802,7 @@ img {
         border-radius: 10px;
     }
 }
-    @media (max-width: 600px) {
+        @media (max-width: 600px) {
             .page-hero { padding: 120px 0 60px; }
             .about-section, .map-section { padding: 64px 0; }
-        .contenedor-youtube{
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }            
-    }
-/* ─── SECCIÓN INVIU ─── */
-.inviu-section {
-    background: #f8faff;
-    border-top: 2px solid #e2e8f0;
-}
-.inviu-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--primary);
-    background: #dbeafe;
-    padding: 6px 14px;
-    border-radius: 99px;
-    margin-bottom: 16px;
-}
-.inviu-section h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-    font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-.inviu-section p {
-    font-size: 1.05rem;
-    color: #475569;
-    line-height: 1.75;
-    max-width: 480px;
-    margin-bottom: 12px;
-}
-.inviu-alias {
-    font-size: 0.88rem !important;
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 8px;
-    padding: 10px 16px;
-    color: #1e3a8a !important;
-    margin-bottom: 24px !important;
-    display: inline-block;
-}
-.inviu-alias strong {
-    color: var(--primary);
-    letter-spacing: 0.02em;
-}
-.descargas-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px;
-    margin-top: 8px;
-}
-.descargas-container img {
-    height: 42px;
-    width: auto;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-.descargas-container img:hover {
-    transform: translateY(-2px);
-    opacity: 0.85;
-}
-
-@media (max-width: 768px) {
-    .hero-centered h1 { font-size: 2.2rem; }
-    .hero-subtitle { font-size: 1rem; }
-    .inviu-section p { max-width: 100%; }
-    .descargas-container { justify-content: center; }
-}
+        }

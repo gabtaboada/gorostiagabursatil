@@ -109,60 +109,43 @@
     </div>
 
 
-    <tv-ticker-tape
-        symbols="FOREXCOM:SPXUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD,AMEX:EWZ,AMEX:SLV,BCBA:IMV,NASDAQ:QQQ,NASDAQ:NVDA,BCBA:YPFD,BCBA:GGAL,BCBA:COME,NASDAQ:AAPL,NASDAQ:AMZN"></tv-ticker-tape>
+<tv-ticker-tape symbols="FOREXCOM:SPXUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD,AMEX:EWZ,AMEX:SLV,BCBA:IMV,NASDAQ:QQQ,NASDAQ:NVDA,BCBA:YPFD,BCBA:GGAL,BCBA:COME,NASDAQ:AAPL,NASDAQ:AMZN"></tv-ticker-tape>
     <main>
         <!-- Hero Section -->
-        <!-- Hero Section – 100% Gorostiaga -->
-        <section id="inicio" class="hero hero-gorostiaga">
-            <div class="hero-bg-overlay"></div>
+        <section id="inicio" class="hero">
             <div class="container hero-container">
-                <div class="hero-content hero-centered">
-                    <!--  <span class="badge">Agente registrado CNV · Matrícula Nº 1636</span> -->
-                    <h1>
-                        <span class="text-gradient">Invertir es para todos.</span><br>
-                        Tu asesor, Gorostiaga Bursátil.
-                    </h1>
-                    <p class="hero-subtitle">Operá en el mercado de capitales argentino con el respaldo de un equipo
-                        profesional. Acciones, bonos, CEDEARs y dólar MEP, con asesoramiento real y personalizado.</p>
-                    <p class="hero-tagline"><strong>FÁCIL · SEGURO · CON ASESORAMIENTO REAL</strong></p>
-                    <div class="hero-btns">
-                        <a href="./pages/abrir-cuenta.html" class="btn btn-primary btn-lg">Abrí tu cuenta <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                        <a href="https://inversor.inviu.com.ar/login" target="_blank" class="btn btn-text">Ingresar
-                            →</a>
+                <div class="hero-content plataforma-msj">
+                    <div class="texto-plataforma">
+                        <h1><span class="text-gradient">Invertir es para todos
+                            Empezá a operar con Gorostiaga Bursátil.</span>
+                        </h1>
+                        <p>Nuestro equipo está trabajando para darte una experiencia más completa, clara y potente. Podés abrir tu cuenta desde la app y empezar a operar
+                            hoy mismo.
+                        </p>
+                        <p>
+                            FÁCIL, INCLUSIVO Y SEGURO.
+                        </p>
+                        <div class="descargas-container">
+                            <div>
+                                <a href="https://play.google.com/store/apps/details?id=io.igam.inviu.investor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">
+                                    <img src="./assets/img/play-store-badge.svg"  alt="Descarga en App Store" loading="eager" width="110" height="28" decoding="async" data-nimg="1" style="color: transparent;">
+                                </a>
+                                
+                            </div>
+                            <div>
+                                <a href="https://apps.apple.com/ar/app/inviu/id1516524838" target="_blank">
+                                    <img src="./assets/img/apple-store-badge.svg" alt="Descarga en App Store" loading="eager" width="110" height="28" decoding="async" data-nimg="1"  style="color: transparent;">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                    <div class="msj-celular">
+                        <img src="./assets/img/inviu-presentation.png" class="inviu-celular" alt="Asesor" id="asesor"
+                            data-aos="zoom-in">
 
-        <!-- Sección INVIU – plataforma operativa -->
-        <section class="inviu-section section-padding">
-            <div class="container plataforma-msj">
-                <div class="texto-plataforma">
-                    <span class="inviu-eyebrow"><i class="fa-solid fa-mobile-screen"></i> Plataforma operativa</span>
-                    <h2>Operamos a través de <span class="text-gradient">INVIU</span></h2>
-                    <p>INVIU es la plataforma con la que vas a gestionar tus inversiones. Simple, segura y disponible
-                        desde tu celular. Abrís la cuenta con el alias de Gorostiaga y operás con nuestro
-                        acompañamiento.</p>
-                    <p class="inviu-alias">Alias de asesor: <strong>GOROSTIAGABURSATIL.INVIU</strong></p>
-                    <div class="descargas-container">
-                        <a href="https://play.google.com/store/apps/details?id=io.igam.inviu.investor&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-                            target="_blank">
-                            <img src="./assets/img/play-store-badge.svg" alt="Descargar en Google Play" loading="lazy"
-                                width="140" height="42">
-                        </a>
-                        <a href="https://apps.apple.com/ar/app/inviu/id1516524838" target="_blank">
-                            <img src="./assets/img/apple-store-badge.svg" alt="Descargar en App Store" loading="lazy"
-                                width="140" height="42">
-                        </a>
+                        <img src="./assets/img/inviu-msj-presentation.png" class="inviu-msj" alt="Mensaje" id="mensaje"
+                            data-aos="zoom-in">
                     </div>
-                </div>
-                <div class="msj-celular">
-                    <img src="./assets/img/inviu-presentation.png" class="inviu-celular" alt="App INVIU"
-                        data-aos="zoom-in">
-                    <img src="./assets/img/inviu-msj-presentation.png" class="inviu-msj" alt="Mensaje"
-                        data-aos="zoom-in">
                 </div>
             </div>
         </section>
@@ -182,6 +165,29 @@
                 </div>
             </div>
         </section>
+
+        <!-- Seccion celular - plataforma inviu-->
+<!--         <section class="cta-section section-padding">
+            <div class="container plataforma-msj">
+                <div class="texto-plataforma">
+                    <h1><span class="text-gradient">Invertir es para todos
+                            Empezá a operar con Gorostiaga Bursátil.</span>
+                    </h1>
+                    <p>Nuestro equipo está trabajando para darte una experiencia más completa, clara y potente. Muy
+                        pronto vas a encontrar aquí todo lo que necesitás para invertir con confianza en el mercado de
+                        capitales argentino. Mientras tanto, podés abrir tu cuenta desde la app y empezar a operar hoy
+                        mismo.</p>.
+                    </p>
+                </div>
+                <div class="msj-celular">
+                    <img src="./assets/img/inviu-presentation.png" class="inviu-celular" alt="Asesor" id="asesor"
+                        data-aos="zoom-in">
+
+                    <img src="./assets/img/inviu-msj-presentation.png" class="inviu-msj" alt="Mensaje" id="mensaje"
+                        data-aos="zoom-in">
+                </div>
+            </div>
+        </section> -->
 
         <!-- Instagram Feed Section -->
         <section class="instagram-section" id="instagram">
@@ -208,66 +214,22 @@
 
         <!-- YouTube Section -->
         <section class="youtube-section" id="youtube">
-            <h2 >Análisis y actualidad de mercados</h2>
-            <div class="container contenedor-youtube">
-                <div class="">
-                    <!--playlist -->
-                    <div class="yt-section-header">
-                 <!--        <span class="yt-label"><i class="fa-brands fa-youtube"></i> Canal de YouTube</span> -->
-                        <h3>Miércoles de Análisis Técnico</h3>
-                        <!--  <p class="yt-desc">Mirá nuestro último video y si querés ver más, accedé a la playlist completa.</p> -->
-                    </div>
-
-                    <div class="yt-player-wrap" data-playlist="PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD">
-                        <div class="yt-loading">Cargando video…</div>
-                    </div>
-
-                    <div class="yt-cta">
-                        <a href="https://www.youtube.com/playlist?list=PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD"
-                            target="_blank" class="yt-playlist-btn">
-                            <i class="fa-brands fa-youtube"></i> Ver playlist completa
-                        </a>
-                    </div>
-
+            <div class="container">
+                <div class="yt-section-header">
+                    <span class="yt-label"><i class="fa-brands fa-youtube"></i> Canal de YouTube</span>
+                    <h2 class="yt-title">Últimas novedades en video</h2>
+                    <p class="yt-desc">Mirá nuestro último video y si querés ver más, accedé a la playlist completa.</p>
                 </div>
-                <div class="">
-                    <!--playlist -->
-                    <div class="yt-section-header">
-                        <!-- <span class="yt-label"><i class="fa-brands fa-youtube"></i> Canal de YouTube</span> -->
-                        <h3>Sábados bursátiles</h3>
-                        <!--      <p class="yt-desc">Mirá nuestro último video y si querés ver más, accedé a la playlist completa.</p> -->
-                    </div>
 
-                    <div class="yt-player-wrap" data-playlist="PLk6WZTxCpjQsGrK9-jbsuZYZo9zlOPvhD">
-                        <div class="yt-loading">Cargando video…</div>
-                    </div>
-
-                    <div class="yt-cta">
-                        <a href="https://www.youtube.com/live/U_Q_Yq54NuU?si=jTI32nU-0wzTWhnY" target="_blank"
-                            class="yt-playlist-btn">
-                            <i class="fa-brands fa-youtube"></i> Ver playlist completa
-                        </a>
-                    </div>
-
+                <div class="yt-player-wrap" id="yt-player-wrap">
+                    <div class="yt-loading">Cargando video…</div>
                 </div>
-                <div class="">
-                    <!--playlist -->
-                    <div class="yt-section-header">
-                        <!-- <span class="yt-label"><i class="fa-brands fa-youtube"></i> Canal de YouTube</span> -->
-                        <h3>Cierre de mercados</h3>
-                        <!-- <p class="yt-desc">Mirá nuestro último video y si querés ver más, accedé a la playlist completa.</p> -->
-                    </div>
 
-                    <div class="yt-player-wrap" data-playlist="PLk6WZTxCpjQudLpowUm4cyb5XTjvAeAE8">
-                        <div class="yt-loading">Cargando video…</div>
-                    </div>
-                    <div class="yt-cta">
-                        <a href="https://youtube.com/playlist?list=PLk6WZTxCpjQudLpowUm4cyb5XTjvAeAE8&si=CIazQMNfC-y-BDMg"
-                            target="_blank" class="yt-playlist-btn">
-                            <i class="fa-brands fa-youtube"></i> Ver playlist completa
-                        </a>
-                    </div>
-
+                <div class="yt-cta">
+                    <a href="https://www.youtube.com/playlist?list=PLk6WZTxCpjQsVbgDrU7frAhqjimy4CuuD" target="_blank"
+                        class="yt-playlist-btn">
+                        <i class="fa-brands fa-youtube"></i> Ver playlist completa
+                    </a>
                 </div>
             </div>
         </section>
