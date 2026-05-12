@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <title>Plataforma | Gorostiaga Bursátil</title>
+    <meta name="description"
+        content="Conocé al equipo de Gorostiaga Bursátil. Asesoramiento financiero integral con foco en el inversor y el mercado de capitales argentino.">
+    <meta name="keywords"
+        content="quiénes somos Gorostiaga Bursátil, equipo de inversiones, asesor financiero Argentina, agente de negociación CNV, matrícula 1636, mercado de capitales Buenos Aires">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <!-- js -->
+    <!-- bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/main.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- ── HEADER (igual que index) ── -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/img/logo.png" alt="Gorostiaga Bursátil Logo" class="logo-img">
+            </a>
+            <nav class="nav header-menu">
+                <ul class="nav-list">
+                    <li><a href="#" class="">Finanzas</a></li>
+                    <li><a href="../pages/quienes-somos.html" class="">Quienes somos</a></li>
+                    <li><a href="../pages/plataforma.html" class="active">Plataforma</a></li>
+                    <li><a href="#" class="">Aprende</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../pages/abrir-cuenta.html" class="btn btn-primary">Abrir Cuenta</a>
+                <a href="https://inversor.inviu.com.ar/login" class="btn btn-outline" target="_blank">CUENTA INVIU</a>
+                <div class="rosval-dropdown" id="rosvalDropdown">
+                    <button class="rosval-btn">
+                        <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores" class="rosval-logo">
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="rosval-menu">
+                        <div class="rosval-label">RosVal</div>
+                        <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
+                            target="_blank">
+                            <i class="fa-solid fa-chart-line"></i> Ver Posición
+                        </a>
+                        <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
+                        </a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
+            <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">Ingresar</a></li>
+            <li style="margin-top:1rem; padding-top:1rem; border-top: 1px solid #e2e8f0;">
+                <div class="mobile-rosval-logo">
+                    <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores"><span>RosVal</span>
+                </div>
+                <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
+                    target="_blank"
+                    style="display:flex;align-items:center;gap:0.5rem;font-size:1rem;font-weight:600;color:#1e3a8a;padding:0.5rem 0;">
+                    <i class="fa-solid fa-chart-line"></i> Ver Posición
+                </a>
+                <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank"
+                    style="display:flex;align-items:center;gap:0.5rem;font-size:1rem;font-weight:600;color:#1e3a8a;padding:0.5rem 0;">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- ── PAGE HERO ── -->
+        <section class="page-hero">
+            <div class="container page-hero-content">
+                <h1>
+                    Plataformas
+                </h1>
+                
+                    <p>
+                        Accedé al mercado de capitales argentino a través de una plataforma moderna,
+                        simple y segura. Invertí en acciones, bonos, CEDEARs y dólar MEP con el
+                        acompañamiento de Gorostiaga Bursátil.
+                    </p>
+
+                </div>
+                <div class="hero-features">
+                    <span><i class="fa-solid fa-circle-check"></i> 100% online</span>
+                    <span><i class="fa-solid fa-circle-check"></i> Operaciones seguras</span>
+                    <span><i class="fa-solid fa-circle-check"></i> Asesoramiento personalizado</span>
+                </div>
+                
+        </section>
+        <!-- ── INVIU FEATURE ── -->
+        <!-- <section class="plataforma-feature">
+    <div class="container plataforma-grid">
+
+        <div class="plataforma-texto">
+
+            <span class="platform-badge">
+                <i class="fa-solid fa-globe"></i>
+                Plataforma INVIU
+            </span>
+
+            <h2>
+                Integración del
+                <span class="inviu-gradient">
+                    mercado local e internacional
+                </span>
+            </h2>
+
+            <p>
+                Accedé a más oportunidades de inversión y operá de forma simple
+                desde una única plataforma.
+            </p>
+
+            <p class="platform-highlight">
+                Diseñá junto a tu asesor estrategias adaptadas a tus objetivos
+                financieros y perfil de riesgo.
+            </p>
+
+            <div class="platform-features">
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    Acciones y CEDEARs
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-building-columns"></i>
+                    Bonos y renta fija
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    Dólar MEP
+                </div>
+            </div>
+
+        </div>
+
+        <div class="plataforma-imagenes">
+
+            <img src="../assets/img/celu-slide-01.png"
+                class="phone-back"
+                alt="Plataforma INVIU">
+
+            <img src="../assets/img/celu-slide-02.png"
+                class="phone-front"
+                alt="App INVIU">
+
+        </div>
+
+    </div>
+</section> -->
+        <section class="platform-slider-section">
+            <div class="container">
+                <div id="platformCarousel" class="carousel slide platform-carousel" data-bs-ride="carousel">
+
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#platformCarousel" data-bs-slide-to="0"
+                            class="active"></button>
+
+                        <button type="button" data-bs-target="#platformCarousel" data-bs-slide-to="1"></button>
+
+                        <button type="button" data-bs-target="#platformCarousel" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+
+                        <!-- SLIDE 1 -->
+                        <div class="carousel-item active">
+                            <div class="platform-slide integracion-slide">
+
+                                <div class="slide-text">
+                                    <div class="slide-icon">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+
+                                    <h4 data-aos="zoom-in-right" class="aos-init aos-animate">
+                                        Integración del <span class="aos-animate">mercado local e internacional</span>
+                                    </h4>
+
+                                    <p data-aos="zoom-in-right" data-aos-delay="200" class="aos-init aos-animate">
+                                        <b>Más opciones</b> para diseñar junto a tu asesor estrategias de inversión que
+                                        se adapten a tus objetivos y perfil de riesgo
+                                    </p>
+                                </div>
+
+                                <div class="slide-image">
+                                    <div class="phone-card phone-back">
+                                        <img src="../assets/img/celu-slide-01.png" alt="Aplicación Inviu">
+                                    </div>
+
+                                    <div class="phone-card phone-front">
+                                        <img src="../assets/img/celu-slide-02.png" alt="Plataforma Inviu">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2 -->
+
+                        <!--  <div class="carousel-item">
+                    <div class="platform-slide simpleza-slide">
+
+                        <div class="slide-text">
+                            <div class="slide-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <span class="slide-badge">OPERÁ FÁCIL</span>
+
+                            <h2>
+                                Simpleza para
+                                <span>operar</span>
+                            </h2>
+
+                            <p>
+                                Soluciones <strong>one click</strong> para agilizar
+                                la gestión de tu dinero y operar de forma rápida,
+                                intuitiva y segura.
+                            </p>
+
+                            <div class="slide-features">
+                                <span><i class="fa-solid fa-check"></i> Transferencias</span>
+                                <span><i class="fa-solid fa-check"></i> Dólar MEP</span>
+                                <span><i class="fa-solid fa-check"></i> Inversiones online</span>
+                            </div>
+                        </div>
+
+                        <div class="slide-image">
+
+                            <div class="device-main">
+                                <img src="../assets/img/inviu-operar.png"
+                                    alt="Operar con Inviu">
+                            </div>
+
+                            <div class="floating-card transfer-card">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                Transferencia inmediata
+                            </div>
+
+                            <div class="touch-circle"></div>
+
+                        </div>
+
+                    </div>
+                </div> -->
+
+                        <!-- SLIDE 3 -->
+
+                        <!--   <div class="carousel-item">
+                    <div class="platform-slide control-slide">
+
+                        <div class="slide-text">
+                            <div class="slide-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <span class="slide-badge">CONTROL TOTAL</span>
+
+                            <h2>
+                                Más control,
+                                <span>menos riesgo</span>
+                            </h2>
+
+                            <p>
+                                <strong>Toda la información necesaria</strong>
+                                sobre tus inversiones en tiempo real,
+                                desde cualquier dispositivo.
+                            </p>
+
+                            <div class="slide-features">
+                                <span><i class="fa-solid fa-check"></i> Seguimiento</span>
+                                <span><i class="fa-solid fa-check"></i> Reportes</span>
+                                <span><i class="fa-solid fa-check"></i> Información en vivo</span>
+                            </div>
+                        </div>
+
+                        <div class="slide-image">
+
+                            <div class="laptop-card">
+                                <img src="../assets/img/inviu-dashboard.png"
+                                    alt="Dashboard Inviu">
+                            </div>
+
+                            <div class="floating-card search-card">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                Seguimiento en tiempo real
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> -->
+
+                        <!-- Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#platformCarousel"
+                            data-bs-slide="prev">
+
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#platformCarousel"
+                            data-bs-slide="next">
+
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+                </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER (igual que index) ── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">
+                        <img src="../assets/img/logo_footer.png" alt="Logo gorostiaga bursatil para footer de la web"
+                            class="logo-img">
+                        Gorostiaga<span class="logo-accent">Bursátil</span>
+                    </a>
+                    <p>Agente de Negociación - Matrícula Nº 1636</p>
+                    <p>Sarmiento 348 Piso 1º CABA<br>011 3138-8504</p>
+                    <p>Expertos en mercado de capitales. Potenciando tu futuro financiero con solidez y confianza.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/gorostiagabursatil/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@GorostiagaBursatil" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Compañía</h4>
+                        <ul>
+                            <li><a href="#">Quiénes somos</a></li>
+                            <li><a href="../index.html">Actividades</a></li>
+                            <li><a href="mailto:contacto@gorostiagabursatil.com">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Inversiones</h4>
+                        <ul>
+                            <li><a href="#">Acciones</a></li>
+                            <li><a href="#">Bonos</a></li>
+                            <li><a href="#">CEDEARs</a></li>
+                            <li><a href="../assets/documentos/pdf/TablaDeAranceles.pdf">Aranceles</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legales</h4>
+                        <ul>
+                            <li><a href="../assets/documentos/pdf/Terminosycondiciones.pdf">Términos y Condiciones</a>
+                            </li>
+                            <li><a href="../assets/documentos/pdf/CodigoDeConducta.pdf">Código de Conducta</a></li>
+                            <li><a href="../assets/documentos/pdf/RegistroDeIdoneos.pdf">Registro de Idóneos</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos">Registro Público</a></li>
+                            <li><a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio">Marco
+                                    Regulatorio</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos/Idoneos">Agentes
+                                    Autorizados</a></li>
+                            <li><a
+                                    href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor">Defensa
+                                    al Consumidor</a></li>
+                            <li><a href="https://www.arca.gob.ar/landing/default.asp"><img
+                                        src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="QR AFIP" width="50"
+                                        height="70"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gorostiaga Bursátil. Todos los derechos reservados.</p>
+                <div class="cnv-badges"><span>Agente Registrado CNV</span></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
