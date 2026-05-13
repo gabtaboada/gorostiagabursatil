@@ -16,17 +16,21 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- bootstrap-->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Estilos-->
     <link rel="stylesheet" href="../assets/css/estilo.css">
-    <!-- js -->
-    <!-- bootstrap-->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/main.js" defer></script>
+
 
 </head>
 
@@ -40,9 +44,9 @@
             </a>
             <nav class="nav header-menu">
                 <ul class="nav-list">
-                    <li><a href="#" class="">Finanzas</a></li>
+                    <li><a href="#" class="active">Finanzas</a></li>
                     <li><a href="../pages/quienes-somos.html" class="">Quienes somos</a></li>
-                    <li><a href="../pages/plataforma.html" class="active">Plataforma</a></li>
+                    <li><a href="../pages/plataforma.html" >Plataforma</a></li>
                     <!-- <li><a href="#" class="">Aprende</a></li> -->
                 </ul>
             </nav>
@@ -98,23 +102,98 @@
         <!-- ── PAGE HERO ── -->
         <section class="page-hero">
             <div class="container page-hero-content">
-                <h1>
-                    Finanzas
-                </h1>
-
+                <h1>Finanzas</h1>
             </div>
             <div class="hero-features">
                 <span>Brindamos a nuestros clientes un análisis independiente de los mercados de capitales</span>
             </div>
-
         </section>
-            <section>
-            
+
+        <!-- ── ECONOMISTA + REPORTES ── -->
+        <section class="reportes-section section-padding">
             <div class="container">
-                <h3>Plataforma Inviu</h3>
+
+                <!-- Perfil del economista -->
+                <div class="economista-card">
+                    <div class="economista-foto">
+                        <img src="../assets/img/gustavoneffa.jpeg"
+                             onerror="this.src='../assets/img/logo.png'"
+                             alt="Gustavo Neffa – Economista" />
+                    </div>
+                    <div class="economista-info">
+                        <span class="economista-eyebrow"><i class="fa-solid fa-chart-line"></i> Análisis semanal de mercados</span>
+                        <h2>Gustavo Neffa</h2>
+                        <p class="economista-titulo">Economista</p>
+                        <p class="economista-desc">Master en Banca de la Universidad del CEMA / William School of Business, Rochester (NY). Especialista en análisis de mercados de capitales y estrategias de inversión.</p>
+                        <div class="economista-badges">
+                            <span><i class="fa-solid fa-graduation-cap"></i> CEMA / Rochester NY</span>
+                            <span><i class="fa-solid fa-building-columns"></i> Mercado de Capitales</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reportes -->
+                <div class="reportes-header">
+                    <h3>Reportes semanales</h3>
+                    <p>Análisis independiente del mercado, disponible para descarga.</p>
+                </div>
+
+                <div class="reportes-grid">
+
+                    <!-- Card reporte – duplicar para agregar más -->
+                    <div class="reporte-card">
+                        <div class="reporte-card-header">
+                            <div class="reporte-icono">
+                                <i class="fa-regular fa-file-pdf"></i>
+                            </div>
+                            <span class="reporte-fecha">Semana del 12 mayo, 2025</span>
+                        </div>
+                        <h4 class="reporte-titulo">Reporte Semanal de Mercados</h4>
+                        <p class="reporte-desc">Análisis técnico y fundamental de los principales activos del mercado argentino e internacional.</p>
+                        <a href="../assets/documentos/reportes/reporteSemanaDeMercadosN193-mayo26.pdf"
+                           target="_blank"
+                           class="btn-reporte">
+                            <i class="fa-solid fa-download"></i> Descargar reporte
+                        </a>
+                    </div>
+
+                    <div class="reporte-card">
+                        <div class="reporte-card-header">
+                            <div class="reporte-icono">
+                                <i class="fa-regular fa-file-pdf"></i>
+                            </div>
+                            <span class="reporte-fecha">Semana del 5 mayo, 2025</span>
+                        </div>
+                        <h4 class="reporte-titulo">Reporte Semanal de Mercados</h4>
+                        <p class="reporte-desc">Análisis técnico y fundamental de los principales activos del mercado argentino e internacional.</p>
+                        <a href="../assets/documentos/reportes/reporteSemanaDeMercadosN192-mayo26.pdf"
+                           target="_blank"
+                           class="btn-reporte">
+                            <i class="fa-solid fa-download"></i> Descargar reporte
+                        </a>
+                    </div>
+
+                    <div class="reporte-card">
+                        <div class="reporte-card-header">
+                            <div class="reporte-icono">
+                                <i class="fa-regular fa-file-pdf"></i>
+                            </div>
+                            <span class="reporte-fecha">Semana del 28 abril, 2025</span>
+                        </div>
+                        <h4 class="reporte-titulo">Reporte Semanal de Mercados</h4>
+                        <p class="reporte-desc">Análisis técnico y fundamental de los principales activos del mercado argentino e internacional.</p>
+                        <a href="../assets/documentos/reportes/reporteSemanaDeMercadosN191-abril26.pdf"
+                           target="_blank"
+                           class="btn-reporte">
+                            <i class="fa-solid fa-download"></i> Descargar reporte
+                        </a>
+                    </div>
+
+                </div>
+                <!-- fin reportes-grid -->
+
             </div>
-            </section>
-     
+        </section>
 
     </main>
 
