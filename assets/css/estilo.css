@@ -1181,14 +1181,19 @@ img {
     font-size: 3.3rem;
     line-height: 1.1;
     font-weight: 800;
-    color: #fff;
+    /*color: #fff;*/
+    color: #000;
     margin-bottom: 1.5rem;
 }
 
 .slide-text h2 span {
-    color: #06be63;
+    /* color: #06be63; */
+    color: #062a86;
 }
-
+.slide-text h4 span {
+    /* color: #06be63; */
+    color: #062a86;
+}
 .slide-text p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -1197,8 +1202,8 @@ img {
 }
 .slide-text p b {
 
-    background: linear-gradient(90deg, #062a86 0%, #0f40d9 45%, #6d9ee5 100%);
-
+    /* background: linear-gradient(90deg, #062a86 0%, #0f40d9 45%, #6d9ee5 100%); */
+    background: #0f40d9 ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1287,10 +1292,28 @@ img {
     font-weight: 600;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
-
+.slide-image .floating-card {
+    position: absolute;
+    padding: 1rem 1.3rem;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    background: #06be63;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+.slide-image .transfer-card {
+    top: 59%;
+    right: 22%;
+}
+.slide-image .floating-card i {
+    color: #ffffff;
+    margin-right: 0.5rem;
+}
 .transfer-card {
-    top: 18%;
-    right: 5%;
+    top: 59%;
+    right: 22%;
 }
 
 .search-card {
@@ -1346,18 +1369,22 @@ img {
 
 .carousel-indicators {
     bottom: 30px;
+    
+}
+.carousel-indicators .indicador-redondo{
+     background-color: #83caa7;
 }
 
 .carousel-indicators button {
     width: 12px !important;
     height: 12px !important;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.4);
-    border: none;
+    background-color: #1d8451;
+    border: 1px solid black;
 }
 
 .carousel-indicators .active {
-    background-color: #06be63;
+    background-color: #77c69e;
 }
 
 /* Responsive */
