@@ -37,7 +37,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-    <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+    <!-- <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script> -->
+
     <script src="./assets/js/main.js" defer></script>
     <style>
 
@@ -53,10 +54,10 @@
 
             <nav class="nav header-menu">
                 <ul class="nav-list">
-                    <li><a href="#" class="">Finanzas</a></li>
+                    <li><a href="./pages/finanzas.html" class="">Finanzas</a></li>
                     <li><a href="./pages/quienes-somos.html" class="">Quienes somos</a></li>
                     <li><a href="./pages/plataforma.html" class="">Plataforma</a></li>
-                    <li><a href="#" class="">Aprende</a></li>
+                    <!-- <li><a href="#" class="">Aprende</a></li> -->
                 </ul>
             </nav>
             <div class="header-actions">
@@ -148,9 +149,55 @@
     </div>
 
 
-    <tv-ticker-tape
-        symbols="FOREXCOM:SPXUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD,AMEX:EWZ,AMEX:SLV,BCBA:IMV,NASDAQ:QQQ,NASDAQ:NVDA,BCBA:YPFD,BCBA:GGAL,BCBA:COME,NASDAQ:AAPL,NASDAQ:AMZN"></tv-ticker-tape>
+
     <main>
+        <!-- TradingView Ticker -->
+        <div class="ticker-wrapper">
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                        {
+                            "symbols": [
+                                {
+                                    "proName": "FOREXCOM:SPXUSD",
+                                    "title": "S&P 500"
+                                },
+                                {
+                                    "proName": "BITSTAMP:BTCUSD",
+                                    "title": "Bitcoin"
+                                },
+                                {
+                                    "proName": "BITSTAMP:ETHUSD",
+                                    "title": "Ethereum"
+                                },
+                                {
+                                    "proName": "NASDAQ:NVDA",
+                                    "title": "NVIDIA"
+                                },
+                                {
+                                    "proName": "NASDAQ:AAPL",
+                                    "title": "Apple"
+                                },
+                                {
+                                    "proName": "BCBA:GGAL",
+                                    "title": "Galicia"
+                                },
+                                {
+                                    "proName": "BCBA:YPFD",
+                                    "title": "YPF"
+                                }
+                            ],
+                                "showSymbolLogo": true,
+                                    "isTransparent": false,
+                                        "displayMode": "adaptive",
+                                            "colorTheme": "dark",
+                                                "locale": "es"
+                        }
+                    </script>
+            </div>
+        </div>
         <!-- Hero Section -->
         <!-- Hero Section – 100% Gorostiaga -->
         <section id="inicio" class="container hero hero-gorostiaga">
