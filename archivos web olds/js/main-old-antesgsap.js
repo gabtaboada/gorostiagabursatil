@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     chatbotButton.href = 'https://gorostiagabursatil.com/ia/index.html';
     chatbotButton.className = 'chatbot-float';
-    chatbotButton.target = '_blank';
     const isInsidePages = window.location.pathname.includes('/pages/');
     const chatbotImage = isInsidePages
         ? '../assets/img/chatbot.png'
@@ -225,193 +224,118 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 
-});/* GSAP - solo si existe la librería */
+});
+/* slider index carosuel*/
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const container = document.querySelector(".our-work");
-if (typeof gsap !== 'undefined') {
+const list = document.querySelector(".carousel__nav");
+const listItems = gsap.utils.toArray(".carousel__nav__item", list);
+const slides = gsap.utils.toArray(".carousel__item");
+const tl = gsap.timeline();
+const myST = ScrollTrigger.create({
+    animation: tl,
+    id: "st",
+    trigger: container,
+    start: "top top",
+    end: "+=" + container.clientHeight * (slides.length - 1),
+    pin: container,
+    scrub: true,
+    snap: {
+        snapTo: 1 / (slides.length - 1)
+    },
+    markers: false
+})
 
-    /* slider index carousel */
+gsap.set(slides, { xPercent: () => { return (window.innerWidth < 768 ? 125 : 0) }, yPercent: () => { return (window.innerWidth > 768 ? 125 : 0) }, scale: 0.5, opacity: 0 });
+listItems.forEach((item, i) => {
+    item.addEventListener("click", e => {
+        e.preventDefault();
+        const percent = tl.labels[e.target.getAttribute("data-target")] / tl.totalDuration();
+        const scrollPos = myST.start + (myST.end - myST.start) * percent;
+        gsap.to(window, { duration: 2, scrollTo: scrollPos });
+    });
 
-    //const container = document.querySelector(".our-work");
-
-    if (container) {
-
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-        const list = document.querySelector(".carousel__nav");
-        const listItems = gsap.utils.toArray(".carousel__nav__item", list);
-        const slides = gsap.utils.toArray(".carousel__item");
-
-        const tl = gsap.timeline();
-
-        const myST = ScrollTrigger.create({
-            animation: tl,
-            id: "st",
-            trigger: container,
-            start: "top top",
-            end: "+=" + container.clientHeight * (slides.length - 1),
-            pin: container,
-            scrub: true,
-            snap: {
-                snapTo: 1 / (slides.length - 1)
-            },
-            markers: false
-        });
-
-        gsap.set(slides, {
-            xPercent: () => window.innerWidth < 768 ? 125 : 0,
-            yPercent: () => window.innerWidth > 768 ? 125 : 0,
-            scale: 0.5,
-            opacity: 0
-        });
-
-        listItems.forEach((item, i) => {
-
-            item.addEventListener("click", e => {
-
-                e.preventDefault();
-
-                const percent =
-                    tl.labels[e.target.getAttribute("data-target")] /
-                    tl.totalDuration();
-
-                const scrollPos =
-                    myST.start +
-                    (myST.end - myST.start) * percent;
-
-                gsap.to(window, {
-                    duration: 2,
-                    scrollTo: scrollPos
-                });
-
-            });
-
-            const previousItem = listItems[i - 1];
-
-            if (previousItem) {
-
-                tl
-                    .to(item,
-                        {
-                            background: "rgb(114 186 255)",
-                            boxShadow: '0 0 16px #d96411'
-                        },
-                        0.5 * (i - 1)
-                    )
-                    .to(slides[i],
-                        {
-                            opacity: 1,
-                            yPercent: 0,
-                            xPercent: 0,
-                            scale: 1
-                        },
-                        '<'
-                    )
-                    .to(previousItem,
-                        {
-                            backgroundColor: '#424b58',
-                            boxShadow: '0 0 16px transparent'
-                        },
-                        '<'
-                    )
-                    .to(slides[i - 1],
-                        {
-                            opacity: 0,
-                            yPercent: () => window.innerWidth > 768 ? -125 : 0,
-                            xPercent: () => window.innerWidth < 768 ? -125 : 0,
-                            scale: 0.5
-                        },
-                        '<'
-                    )
-                    .add("our-work-" + (++i));
-
-            } else {
-
-                gsap.set(item, {
-                    background: "rgb(114 186 255)",
-                    boxShadow: '0 0 16px #d96411'
-                });
-
-                gsap.to(slides[i], {
+    const previousItem = listItems[i - 1];
+    if (previousItem) {
+        tl
+            .to(item, { background: "rgb(114 186 255)", boxShadow: '0 0 16px #d96411' }, 0.5 * (i - 1))
+            .to(
+                slides[i],
+                {
+                    opacity: 1,
                     yPercent: 0,
                     xPercent: 0,
-                    opacity: 1,
                     scale: 1,
-                    duration: 0
-                }, 0);
-
-                tl.add("our-work-" + (++i), "+=0");
-
-            }
-
-        });
-
+                },
+                '<'
+            )
+            .to(previousItem, { backgroundColor: '#424b58', boxShadow: '0 0 16px transparent' }, '<')
+            .to(
+                slides[i - 1],
+                {
+                    opacity: 0,
+                    yPercent: () => { return (window.innerWidth > 768 ? -125 : 0) },
+                    xPercent: () => { return (window.innerWidth < 768 ? -125 : 0) },
+                    scale: 0.5,
+                },
+                '<'
+            ).add("our-work-" + (++i))
+    } else {
+        gsap.set(item,  { background: "rgb(114 186 255)", boxShadow: '0 0 16px #d96411' });
+        gsap.to(slides[i], { yPercent: 0, xPercent: 0, opacity: 1, scale: 1, duration: 0 }, 0);
+        tl.add("our-work-" + (++i), "+=0")
     }
+});
 
-    /* animaciones home */
+/* index prueba */
 
-    if (document.querySelector(".floating-card-1")) {
+gsap.to(".floating-card-1",{
+    y:-18,
+    duration:2.5,
+    repeat:-1,
+    yoyo:true,
+    ease:"sine.inOut"
+});
 
-        gsap.to(".floating-card-1", {
-            y: -18,
-            duration: 2.5,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-        });
-
-    }
-
-    if (document.querySelector(".floating-card-2")) {
-
-        gsap.to(".floating-card-2", {
-            y: 18,
-            duration: 3,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-        });
-
-    }
-
-    if (document.querySelector(".phone-device")) {
-
-        gsap.to(".phone-device", {
-            rotateY: -8,
-            duration: 4,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-        });
-
-    }
-
-}
+gsap.to(".floating-card-2",{
+    y:18,
+    duration:3,
+    repeat:-1,
+    yoyo:true,
+    ease:"sine.inOut"
+});
+/*
+gsap.to(".floating-card-3",{
+    y:-10,
+    duration:2,
+    repeat:-1,
+    yoyo:true,
+    ease:"sine.inOut"
+});
+*/
+gsap.to(".phone-device",{
+    rotateY:-8,
+    duration:4,
+    repeat:-1,
+    yoyo:true,
+    ease:"sine.inOut"
+});
 /* mensaje feedback suscribirse*/
+console.log('FORMULARIO JS CARGADO');
 
 const form = document.getElementById('form-captacion-reportes');
 
 if (form) {
-    //const btn = document.querySelector('.btnSuscribir'); // Asegúrate de seleccionar el botón correcto
-    const btn = document.getElementById('btnSuscribir')
+
     form.addEventListener('submit', async function (e) {
 
         e.preventDefault();
-        // 1. Deshabilitar botón y cambiar texto
-        btn.disabled = true;
-        btn.innerHTML = '<span class="spinner"></span> Enviando...';
-        //btn.innerHTML = 'Enviando...';
+
         const feedback = document.getElementById('form-feedback');
 
+        const formData = new FormData(form);
+
         try {
-
-            const token = await grecaptcha.execute(
-                '6LcZ1ActAAAAAEYPg5Betaic_u0_tSd0gJ9uVm9r',
-                { action: 'suscripcion' }
-            );
-
-            document.getElementById('recaptcha_token').value = token;
-
-            const formData = new FormData(form);
 
             const response = await fetch(form.action, {
                 method: 'POST',
@@ -419,10 +343,7 @@ if (form) {
             });
 
             const data = await response.json();
-            // 2. Restaurar botón al finalizar
 
-            btn.disabled = false;
-            btn.innerHTML = 'Suscribirme';
             feedback.style.display = 'block';
 
             if (data.success) {
@@ -444,8 +365,6 @@ if (form) {
 
         } catch (error) {
 
-            console.error(error);
-
             feedback.style.display = 'block';
 
             feedback.className = 'form-feedback error';
@@ -457,5 +376,3 @@ if (form) {
     });
 
 }
-
-/*formu enviar*/

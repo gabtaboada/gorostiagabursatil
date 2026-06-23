@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+       <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <title>Gorostiaga Bursátil | Inversiones Inteligentes</title>
     <meta name="description"
         content="Tu experiencia de inversión comienza con Gorostiaga Bursátil. Asesoramiento experto en Acciones, Bonos, CEDEARs y más.">
@@ -18,7 +18,9 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- estilos -->
     <link rel="stylesheet" href="../assets/css/estilo.css">
     <!--js-->
@@ -72,7 +74,7 @@
         </div>
     </header>
 
-    <div class="mobile-menu">
+    <!-- <div class="mobile-menu">
         <div class="mobile-menu-header">
             <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
             <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
@@ -94,6 +96,45 @@
                     <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
                 </a>
             </li>
+        </ul>
+    </div> -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
+            <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <ul class="mobile-nav-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/finanzas.html">Finanzas</a></li>
+            <li><a href="../pages/quienes-somos.html">Quienes somos</a></li>
+            <li><a href="../pages/plataforma.html">Plataforma</a></li>
+            <!-- <li><a href="#">Aprende</a></li> -->
+
+            <li>
+                <a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">
+                    Ingresar
+                </a>
+            </li>
+
+            <li style="margin-top:1rem; padding-top:1rem; border-top: 1px solid #e2e8f0;">
+                <div class="mobile-rosval-logo">
+                    <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores">
+                    <span>RosVal</span>
+                </div>
+
+                <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
+                    target="_blank"
+                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
+                    <i class="fa-solid fa-chart-line"></i> Ver Posición
+                </a>
+
+                <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank"
+                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
+                </a>
+            </li>
+
         </ul>
     </div>
 
@@ -160,7 +201,7 @@
 
                 <div class="alias-card">
                     <span class="alias-label">Alias del asesor:</span>
-                    <span class="alias-value">GOROSTIAGABURSATIL.INVIU</span>
+                    <span class="alias-value">GOROSTIAGA.INVIU</span>
                 </div>
 
                 <div class="store-buttons-container">
@@ -190,7 +231,7 @@
             <h2 class="section-title">¿Dudas?</h2>
             <p class="section-desc">Si tenés alguna consulta sobre el proceso de apertura, no dudes en contactarnos.</p>
             <div class="contact-actions" style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
-                <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" target="_blank" class="btn btn-outline"
+                <a href="https://web.whatsapp.com/send?phone=5491131388504" target="_blank" class="btn btn-outline"
                     style="border-color: #25D366; color: #25D366;">
                     <i class="fa-brands fa-whatsapp"></i> Chat en WhatsApp
                 </a>
@@ -203,68 +244,103 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                   <a href="../index.html" class="logo footer-logo">
-                        <img src="../assets/img/logo_footer.png" alt="Logo gorostiaga bursatil para footer de la pagina" class="logo-img">
-                        Gorostiaga<span class="logo-accent">Bursátil</span>
-                    </a>
-                    <p>Agente de Negociación - Matrícula Nº 1636</p>
-                    <p>Expertos en mercado de capitales. Potenciando tu futuro financiero con solidez y confianza.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/gorostiagabursatil/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@GorostiagaBursatil" target="_blank"><i
-                                class="fa-brands fa-youtube"></i></a>
-                        <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" target="_blank"><i
-                                class="fa-brands fa-whatsapp"></i></a>
+            <div class="row gy-5">
+
+                <!-- Columna grande -->
+                <div class="col-12 col-lg-6 ">
+
+                    <div class="footer-brand">
+
+                        <a href="../index.html" class="logo footer-logo">
+                            <img src="../assets/img/logo_footer.png" alt="Logo gorostiaga bursatil para footer de la web"
+                                class="logo-img">
+                            Gorostiaga<span class="logo-accent">Bursátil</span>
+                        </a>
+                        <p>Agente de Negociación - Matrícula Nº 1636</p>
+                        <p><i class="fa-solid fa-location-dot"></i> 
+                             Sarmiento 348 Piso 1º CABA
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                          011 3138-8504</p>
+                        <p> <i class="fa-regular fa-envelope"></i>
+                            contacto@gorostiagabursatil.com
+                        </p>
+                        <p><i class="fa-regular fa-envelope"></i>
+                            administracion@gorostiagabursatil.com
+                        </p>
+                        <p>Expertos en mercado de capitales. Potenciando tu futuro financiero con solidez y confianza.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/gorostiagabursatil/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@GorostiagaBursatil" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" target="_blank"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+
                     </div>
+
                 </div>
 
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Compañía</h4>
-                        <ul>
+                <!-- Columna -->
+                <div class="col-12  col-lg-3  ">
+                    <div class="footer-col mt-4">
+                        <h4>Enlaces útiles</h4>
+                        <ul class="ul-footer">
                             <li><a href="../pages/quienes-somos.html">Quiénes somos</a></li>
-                            <li><a href="../index.html#inicio">Actividades</a></li>
-                            <li><a href="#">Contacto</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Inversiones</h4>
-                        <ul>
-                            <li><a href="#">Acciones</a></li>
-                            <li><a href="#">Bonos</a></li>
-                            <li><a href="#">CEDEARs</a></li>
+                            <li><a href="../pages/finanzas.html">Finanzas</a></li>
+                            <li><a href="../pages/plataforma.html">Plataforma</a></li>
+                            <li><a href="../pages/abrir-cuenta.html">Abrir cuenta</a></li>
                             <li><a href="../assets/documentos/pdf/TablaDeAranceles.pdf">Aranceles</a></li>
                         </ul>
-                    </div>
-                    <!-- <div class="footer-col"> -->
-                    <div class="footer-col">
-                        <h4>Legales</h4>
-                        <ul>
-                            <li><a href="../assets/documentos/pdf/Terminosycondiciones.pdf">Términos y
-                                    Condiciones</a></li>
-                            <li><a href="../assets/documentos/pdf/CodigoDeConducta.pdf">Código de Conducta</a>
-                            </li>
-                            <li><a href="../assets/documentos/pdf/RegistroDeIdoneos.pdf">Registro de
-                                    Idóneos</a></li>
-                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos">Registro Púbico</a></li>
-                            <li><a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio">Marco Regulatorio</a></li>
-                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos/Idoneos">Agentes Autorizados </a></li>
-                            <li><a href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor">Defensa al Consumidor</a></li>
-                            <li><a href="ttps://www.arca.gob.ar/landing/default.asp"><img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="QR AFIP" width="50" height="70"></a></li>
-                        </ul>
-                    </div>
-            </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Gorostiaga Bursátil. Todos los derechos reservados.</p>
-                <div class="cnv-badges">
-                    <span>Agente Registrado CNV</span>
+                    </div>
+
                 </div>
+
+                <!-- Columna -->
+                <div class="col-12  col-lg-3 ">
+
+                    <div class="footer-col mt-4">
+                        <h4>Legales</h4>
+                        <ul class="px-0">
+                            <li><a href="../assets/documentos/pdf/Terminosycondiciones.pdf" target="_blank">Términos y Condiciones</a></li>
+                            <li><a href="../assets/documentos/pdf/CodigoDeConducta.pdf" target="_blank">Código de Conducta</a></li>
+                            <li><a href="../assets/documentos/pdf/RegistroDeIdoneos.pdf" target="_blank">Registro de Idóneos</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos" target="_blank">Registro Púbico</a></li>
+                            <li><a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio" target="_blank">Marco
+                                    Regulatorio</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos/Idoneos" target="_blank">Agentes
+                                    Autorizados</a></li>
+                            <li><a
+                                    href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor" target="_blank">Defensa
+                                    al Consumidor</a></li>
+                            <li><a href="https://www.arca.gob.ar/landing/default.asp"><img
+                                        src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="QR AFIP" width="50"
+                                        height="70" target="_blank"></a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div>
+                        <p>&copy; 2026 Gorostiaga Bursátil. Todos los derechos reservados.</p>
+                        <div class="cnv-badges">
+                            <span>Agente Registrado CNV</span>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
+
     </footer>
 
 </body>
