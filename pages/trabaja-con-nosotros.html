@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <title>Plataforma | Gorostiaga Bursátil</title>
+    <meta name="description"
+        content="Conocé al equipo de Gorostiaga Bursátil. Asesoramiento financiero integral con foco en el inversor y el mercado de capitales argentino.">
+    <meta name="keywords"
+        content="quiénes somos Gorostiaga Bursátil, equipo de inversiones, asesor financiero Argentina, agente de negociación CNV, matrícula 1636, mercado de capitales Buenos Aires">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/postulacion.js" defer></script>
+
+ <style>
+  /* ── Tarjetas de búsquedas ── */
+        .busqueda-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .busqueda-card:hover {
+            box-shadow: 0 8px 32px rgba(30, 58, 138, 0.12);
+            transform: translateY(-4px);
+        }
+        .busqueda-card .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .busqueda-card .card-icon i {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+        .busqueda-card h5 {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        .busqueda-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+        .busqueda-card .badge-area {
+            font-size: 0.8rem;
+            color: #3b82f6;
+            font-weight: 600;
+            background: #eff6ff;
+            border-radius: 20px;
+            padding: 0.25rem 0.75rem;
+            display: inline-block;
+        }
+        .busqueda-card .btn-postular {
+            margin-top: 1.25rem;
+            width: 100%;
+        }
+ 
+        /* ── Valores / por qué trabajar ── */
+        .valor-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .valor-item .valor-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .valor-item .valor-icon i {
+            color: #fff;
+            font-size: 1.1rem;
+        }
+        .valor-item h6 {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+        .valor-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+ 
+        /* ── Formulario de postulación ── */
+        .postulacion-section {
+            background: #f8faff;
+            border-top: 1px solid #e2e8f0;
+        }
+        .postulacion-form {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+        .postulacion-form .form-label {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 0.9rem;
+        }
+        .postulacion-form .form-control,
+        .postulacion-form .form-select {
+            border: 1.5px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 0.65rem 1rem;
+            font-size: 0.95rem;
+            color: #1e293b;
+            transition: border-color 0.2s;
+        }
+        .postulacion-form .form-control:focus,
+        .postulacion-form .form-select:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+        }
+        .postulacion-form .btn-primary {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+        }
+ 
+        /* ── Stats strip ── */
+        .stats-strip {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+            padding: 3rem 0;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-item .stat-num {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+        }
+        .stat-item .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.75);
+            margin-top: 0.4rem;
+        }        
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ── HEADER (igual que index) ── -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/img/logo.png" alt="Gorostiaga Bursátil Logo" class="logo-img">
+            </a>
+            <nav class="nav header-menu">
+                <ul class="nav-list">
+                    <li><a href="#" class="active">Finanzas</a></li>
+                    <li><a href="../pages/quienes-somos.html" class="">Quienes somos</a></li>
+                    <li><a href="../pages/plataforma.html">Plataforma</a></li>
+                    <li><a href="../pages/empresas.html" class="">Empresas</a></li>
+                    <li><a href="../pages/como-invertir.html" class="">¿Como invertir?</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../pages/abrir-cuenta.html" class="btn btn-primary">Abrir Cuenta</a>
+                <a href="https://inversor.inviu.com.ar/login" class="btn btn-outline" target="_blank">CUENTA INVIU</a>
+                <div class="rosval-dropdown" id="rosvalDropdown">
+                    <button class="rosval-btn">
+                        <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores" class="rosval-logo">
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="rosval-menu">
+                        <div class="rosval-label">RosVal</div>
+                        <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
+                            target="_blank">
+                            <i class="fa-solid fa-chart-line"></i> Ver Posición
+                        </a>
+                        <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
+                        </a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
+            <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <ul class="mobile-nav-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/finanzas.html">Finanzas</a></li>
+            <!-- <li><a href="../pages/quienes-somos.html">Quienes somos</a></li> -->
+             <li><a href="../pages/quienes-somos.html">Quienes somos</a></li>
+<li><a href="../pages/trabaja-con-nosotros.html">Trabajá con nosotros</a></li>
+            <li><a href="../pages/plataforma.html">Plataforma</a></li>
+            <li><a href="../pages/empresas.html" class="">Empresas</a></li>
+            <li><a href="../pages/como-invertir.html" class="">¿Como invertir?</a></li>
+            <li>
+                <a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">
+                    Ingresar
+                </a>
+            </li>
+
+            <li style="margin-top:1rem; padding-top:1rem; border-top: 1px solid #e2e8f0;">
+                <div class="mobile-rosval-logo">
+                    <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores">
+                    <span>RosVal</span>
+                </div>
+
+                <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
+                    target="_blank"
+                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
+                    <i class="fa-solid fa-chart-line"></i> Ver Posición
+                </a>
+
+                <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank"
+                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <main>
+       
+    <!-- ── PAGE HERO ── -->
+        <section class="page-hero">
+            <div class="container page-hero-content">
+                <h1>Trabajá con nosotros</h1>
+                <p>Sumate al equipo que impulsa el mercado de capitales argentino con solidez y compromiso profesional.</p>
+            </div>
+        </section>
+ 
+        <!-- ── SECCIÓN 1: Nuestra cultura / Por qué trabajar acá ── -->
+        <section class="py-5" id="cultura">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+ 
+                    <!-- Texto -->
+                    <div class="col-12 col-lg-6" data-aos="fade-right">
+                        <span class="platform-eyebrow"><i class="fa-solid fa-users"></i> Nuestro equipo</span>
+                        <h2 class="mt-3">Un lugar para <span>crecer y desarrollarte</span></h2>
+                        <p class="mt-3">En Gorostiaga Bursátil creemos que el capital humano es el activo más valioso. Somos un equipo comprometido, con años de trayectoria en el mercado de capitales, donde cada integrante aporta valor real a nuestros clientes.</p>
+                        <p>Buscamos personas apasionadas por las finanzas, con ganas de aprender y desafiar los límites del sector. Si querés desarrollar tu carrera en un ambiente dinámico y con propósito, este es tu lugar.</p>
+ 
+                        <div class="d-flex flex-column gap-3 mt-4">
+                            <div class="valor-item">
+                                <div class="valor-icon"><i class="fa-solid fa-rocket"></i></div>
+                                <div>
+                                    <h6>Crecimiento profesional</h6>
+                                    <p>Formación continua y posibilidades reales de desarrollo dentro de la empresa.</p>
+                                </div>
+                            </div>
+                            <div class="valor-item">
+                                <div class="valor-icon"><i class="fa-solid fa-handshake"></i></div>
+                                <div>
+                                    <h6>Ambiente colaborativo</h6>
+                                    <p>Trabajamos en equipo, con comunicación abierta y valores compartidos.</p>
+                                </div>
+                            </div>
+                            <div class="valor-item">
+                                <div class="valor-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div>
+                                    <h6>Exposición al mercado real</h6>
+                                    <p>Actuás en el mercado de capitales desde el primer día, con impacto concreto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Tarjetas de valores -->
+                    <div class="col-12 col-lg-6" data-aos="fade-left">
+                        <div class="row gy-4">
+                            <div class="col-12 col-sm-6">
+                                <div class="empresa-card text-center">
+                                    <i class="fa-solid fa-balance-scale"></i>
+                                    <h5>Ética y transparencia</h5>
+                                    <p>Actuamos con integridad en cada operación y vínculo profesional.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="empresa-card text-center">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                    <h5>Innovación constante</h5>
+                                    <p>Incorporamos herramientas y enfoques modernos para estar siempre a la vanguardia.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="empresa-card text-center">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <h5>Capacitación</h5>
+                                    <p>Acompañamos el desarrollo académico y profesional de cada integrante del equipo.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="empresa-card text-center">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <h5>Flexibilidad</h5>
+                                    <p>Promovemos el equilibrio entre la vida laboral y personal con esquemas adaptables.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ── STATS STRIP ── -->
+        <section class="stats-strip">
+            <div class="container">
+                <div class="row gy-4 text-center">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                            <div class="stat-num">+30</div>
+                            <div class="stat-label">Años en el mercado</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-num">100%</div>
+                            <div class="stat-label">Enfoque en el cliente</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-num">CNV</div>
+                            <div class="stat-label">Agente registrado Nº 1636</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-num">CABA</div>
+                            <div class="stat-label">Sarmiento 348, piso 1°</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ── SECCIÓN 2: Búsquedas abiertas ── -->
+        <section class="py-5" style="background: #f8faff; border-top: 1px solid #e2e8f0;" id="busquedas">
+            <div class="container">
+ 
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="platform-eyebrow"><i class="fa-solid fa-briefcase"></i> Oportunidades</span>
+                    <h2 class="mt-3">Búsquedas <span>abiertas</span></h2>
+                    <p class="text-muted mt-2">Encontrá el rol que va con tu perfil y postulate.</p>
+                </div>
+ 
+                <div class="row gy-4">
+ 
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <div class="busqueda-card h-100 d-flex flex-column">
+                            <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                            <h5>Asesor de Inversiones</h5>
+                            <p>Atención y asesoramiento personalizado a inversores individuales e institucionales en el mercado de capitales.</p>
+                            <div>
+                                <span class="badge-area"><i class="fa-solid fa-map-marker-alt me-1"></i>CABA · Presencial</span>
+                            </div>
+                            <a href="#postularme" class="btn btn-primary btn-postular mt-auto">Postularme</a>
+                        </div>
+                    </div>
+ 
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="busqueda-card h-100 d-flex flex-column">
+                            <div class="card-icon"><i class="fa-solid fa-file-contract"></i></div>
+                            <h5>Analista de Mercado de Capitales</h5>
+                            <p>Análisis de instrumentos financieros, elaboración de informes y seguimiento de cartera para clientes y equipos internos.</p>
+                            <div>
+                                <span class="badge-area"><i class="fa-solid fa-map-marker-alt me-1"></i>CABA · Presencial</span>
+                            </div>
+                            <a href="#postularme" class="btn btn-primary btn-postular mt-auto">Postularme</a>
+                        </div>
+                    </div>
+ 
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="busqueda-card h-100 d-flex flex-column">
+                            <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+                            <h5>Atención al Cliente</h5>
+                            <p>Soporte y acompañamiento a clientes en sus consultas operativas, onboarding y gestión de cuenta comitente.</p>
+                            <div>
+                                <span class="badge-area"><i class="fa-solid fa-map-marker-alt me-1"></i>CABA · Híbrido</span>
+                            </div>
+                            <a href="#postularme" class="btn btn-primary btn-postular mt-auto">Postularme</a>
+                        </div>
+                    </div>
+ 
+                </div>
+ 
+            </div>
+        </section>
+ 
+        <!-- ── SECCIÓN 3: Formulario de postulación ── -->
+        <section class="postulacion-section py-5" id="postularme">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+ 
+                    <!-- Info lateral -->
+                    <div class="col-12 col-lg-5" data-aos="fade-right">
+                        <span class="platform-eyebrow"><i class="fa-solid fa-paper-plane"></i> Postulate</span>
+                        <h2 class="mt-3">¿No encontrás tu <span>perfil ideal?</span></h2>
+                        <p class="mt-3">Dejanos tu CV y cuéntanos qué rol te interesa. Guardamos tu información para futuras búsquedas y te contactamos cuando tengamos una oportunidad que se ajuste a vos.</p>
+ 
+                        <ul class="beneficios-list mt-4">
+                            <li><i class="fa-solid fa-circle-check"></i> Proceso de selección claro y transparente</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Respuesta a todos los candidatos</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Entrevistas con el equipo real, sin filtros innecesarios</li>
+                        </ul>
+ 
+                        <p class="mt-3">También podés escribirnos directamente a
+                            <a href="mailto:rrhh@gorostiagabursatil.com" style="color:#1e3a8a; font-weight:600;">rrhh@gorostiagabursatil.com</a>
+                        </p>
+                    </div>
+ 
+                    <!-- Formulario -->
+                    <div class="col-12 col-lg-7" data-aos="fade-left">
+                        <div class="postulacion-form">
+                            <h4 style="font-weight:700; color:#1e293b; margin-bottom:1.5rem;">Enviá tu postulación</h4>
+ 
+                            <form id="formPostulacion">
+                                <div class="row gy-3">
+ 
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label" for="nombre">Nombre completo *</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required>
+                                    </div>
+ 
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label" for="email">Email *</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
+                                    </div>
+ 
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label" for="telefono">Teléfono</label>
+                                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="11 XXXX-XXXX">
+                                    </div>
+ 
+                                    <div class="col-12 col-sm-6">
+                                        <label class="form-label" for="area">Área de interés *</label>
+                                        <select class="form-select" id="area" name="area" required>
+                                            <option value="" disabled selected>Seleccioná una opción</option>
+                                            <option value="asesor">Asesor de Inversiones</option>
+                                            <option value="analista">Analista de Mercado de Capitales</option>
+                                            <option value="atencion">Atención al Cliente</option>
+                                            <option value="otro">Otro / Espontánea</option>
+                                        </select>
+                                    </div>
+ 
+                                    <div class="col-12">
+                                        <label class="form-label" for="mensaje">Contanos sobre vos *</label>
+                                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
+                                            placeholder="¿Por qué te interesa sumarte a Gorostiaga? ¿Cuál es tu experiencia en el sector?" required></textarea>
+                                    </div>
+ 
+                                    <div class="col-12 mt-2">
+                                        <button type="submit" class="btn btn-primary btn-postular" id="btnPostular">
+                                            <i class="fa-solid fa-paper-plane me-2"></i> Enviar postulación
+                                        </button>
+                                    </div>
+ 
+                                    <!-- Mensaje de respuesta -->
+                                    <div class="col-12" id="postulacionMsg" style="display:none;"></div>
+ 
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ── CTA FINAL ── -->
+        <section class="empresas-cta">
+            <div class="container">
+                <h2>¿Tenés dudas? Hablemos.</h2>
+                <p>Nuestro equipo está disponible para responder cualquier consulta sobre el proceso de selección.</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="mailto:rrhh@gorostiagabursatil.com" class="btn btn-primary">Escribirnos por mail</a>
+                    <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" class="btn btn-outline" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+ 
+                <div class="col-12 col-lg-6">
+                    <div class="footer-brand">
+                        <a href="../index.html" class="logo footer-logo">
+                            <img src="../assets/img/logo_footer.png" alt="Logo gorostiaga bursatil para footer de la web"
+                                class="logo-img">
+                            Gorostiaga<span class="logo-accent">Bursátil</span>
+                        </a>
+                        <p>Agente de Negociación - Matrícula Nº 1636</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Sarmiento 348 Piso 1º CABA</p>
+                        <p><i class="fa-solid fa-phone"></i> 011 3138-8504</p>
+                        <p><i class="fa-regular fa-envelope"></i> contacto@gorostiagabursatil.com</p>
+                        <p><i class="fa-regular fa-envelope"></i> administracion@gorostiagabursatil.com</p>
+                        <p>Expertos en mercado de capitales. Potenciando tu futuro financiero con solidez y confianza.</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/gorostiagabursatil/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@GorostiagaBursatil" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="col-12 col-lg-3">
+                    <div class="footer-col mt-4">
+                        <h4>Enlaces útiles</h4>
+                        <ul class="ul-footer">
+                            <li><a href="../pages/quienes-somos.html">Quiénes somos</a></li>
+                            <li><a href="../pages/finanzas.html">Finanzas</a></li>
+                            <li><a href="../pages/plataforma.html">Plataforma</a></li>
+                            <li><a href="../pages/empresas.html">Empresas</a></li>
+                            <li><a href="../pages/abrir-cuenta.html">Abrir cuenta</a></li>
+                            <li><a href="../assets/documentos/pdf/TablaDeAranceles.pdf">Aranceles</a></li>
+                            <li><a href="../pages/trabaja-con-nosotros.html" style="color:#1d4ed8; font-weight:600;">Trabajá con nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
+ 
+                <div class="col-12 col-lg-3">
+                    <div class="footer-col mt-4">
+                        <h4>Legales</h4>
+                        <ul class="px-0">
+                            <li><a href="../assets/documentos/pdf/Terminosycondiciones.pdf" target="_blank">Términos y Condiciones</a></li>
+                            <li><a href="../assets/documentos/pdf/CodigoDeConducta.pdf" target="_blank">Código de Conducta</a></li>
+                            <li><a href="../assets/documentos/pdf/RegistroDeIdoneos.pdf" target="_blank">Registro de Idóneos</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos" target="_blank">Registro Público</a></li>
+                            <li><a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio" target="_blank">Marco Regulatorio</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos/Idoneos" target="_blank">Agentes Autorizados</a></li>
+                            <li><a href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor" target="_blank">Defensa al Consumidor</a></li>
+                            <li><a href="https://www.arca.gob.ar/landing/default.asp"><img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="QR AFIP" width="50" height="70"></a></li>
+                        </ul>
+                    </div>
+                </div>
+ 
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div>
+                        <p>&copy; 2026 Gorostiaga Bursátil. Todos los derechos reservados.</p>
+                        <div class="cnv-badges">
+                            <span>Agente Registrado CNV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ── FOOTER (igual que index) ── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+
+                <!-- Columna grande -->
+                <div class="col-12 col-lg-6 ">
+
+                    <div class="footer-brand">
+
+                        <a href="../index.html" class="logo footer-logo">
+                            <img src="../assets/img/logo_footer.png" alt="Logo gorostiaga bursatil para footer de la web"
+                                class="logo-img">
+                            Gorostiaga<span class="logo-accent">Bursátil</span>
+                        </a>
+                        <p>Agente de Negociación - Matrícula Nº 1636</p>
+                        <p><i class="fa-solid fa-location-dot"></i> 
+                             Sarmiento 348 Piso 1º CABA
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                          011 3138-8504</p>
+                        <p> <i class="fa-regular fa-envelope"></i>
+                            contacto@gorostiagabursatil.com
+                        </p>
+                        <p><i class="fa-regular fa-envelope"></i>
+                            administracion@gorostiagabursatil.com
+                        </p>
+                        <p>Expertos en mercado de capitales. Potenciando tu futuro financiero con solidez y confianza.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/gorostiagabursatil/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@GorostiagaBursatil" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" target="_blank"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Columna -->
+                <div class="col-12  col-lg-3  ">
+                    <div class="footer-col mt-4">
+                        <h4>Enlaces útiles</h4>
+                        <ul class="ul-footer">
+                            <li><a href="../pages/quienes-somos.html">Quiénes somos</a></li>
+                            <li><a href="../pages/finanzas.html">Finanzas</a></li>
+                            <li><a href="../pages/plataforma.html">Plataforma</a></li>
+                            <li><a href="../pages/abrir-cuenta.html">Abrir cuenta</a></li>
+                            <li><a href="../pages/empresas.html">Empresas</a></li>
+                            <li><a href="../assets/documentos/pdf/TablaDeAranceles.pdf">Aranceles</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- Columna -->
+                <div class="col-12  col-lg-3 ">
+
+                    <div class="footer-col mt-4">
+                        <h4>Legales</h4>
+                        <ul class="px-0">
+                            <li><a href="../assets/documentos/pdf/Terminosycondiciones.pdf" target="_blank">Términos y Condiciones</a></li>
+                            <li><a href="../assets/documentos/pdf/CodigoDeConducta.pdf" target="_blank">Código de Conducta</a></li>
+                            <li><a href="../assets/documentos/pdf/RegistroDeIdoneos.pdf" target="_blank">Registro de Idóneos</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos" target="_blank">Registro Púbico</a></li>
+                            <li><a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio" target="_blank">Marco
+                                    Regulatorio</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos/Idoneos" target="_blank">Agentes
+                                    Autorizados</a></li>
+                            <li><a
+                                    href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor" target="_blank">Defensa
+                                    al Consumidor</a></li>
+                            <li><a href="https://www.arca.gob.ar/landing/default.asp"><img
+                                        src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="QR AFIP" width="50"
+                                        height="70" target="_blank"></a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div>
+                        <p>&copy; 2026 Gorostiaga Bursátil. Todos los derechos reservados.</p>
+                        <div class="cnv-badges">
+                            <span>Agente Registrado CNV</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+        <script>
+        AOS.init();
+    </script>
+    <!-- el script que carga recaptcha -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LcZ1ActAAAAAEYPg5Betaic_u0_tSd0gJ9uVm9r"></script>
+</body>
+
+</html>

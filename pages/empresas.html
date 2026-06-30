@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <title>Empresas / PyME | Gorostiaga Bursátil</title>
+    <meta name="description"
+        content="Soluciones financieras para empresas y PyMEs. Inversiones, financiamiento y asesoramiento especializado en el mercado de capitales argentino.">
+    <meta name="keywords"
+        content="PyME inversiones, eCheqs cuenta comitente, financiamiento PyME, cheques de pago diferido, ACDI, mercado de capitales empresas, Gorostiaga Bursátil">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- js -->
+    <script src="../assets/js/main.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- ── HEADER ── -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/img/logo.png" alt="Gorostiaga Bursátil Logo" class="logo-img">
+            </a>
+            <nav class="nav header-menu">
+                <ul class="nav-list">
+                    <li><a href="../pages/finanzas.html" class="">Finanzas</a></li>
+                    <li><a href="../pages/quienes-somos.html" class="">Quienes somos</a></li>
+                    <li><a href="../pages/plataforma.html" class="">Plataforma</a></li>
+                    <li><a href="../pages/empresas.html" class="active">Empresas</a></li>
+                    <li><a href="../pages/como-invertir.html" class="">¿Como invertir?</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../pages/abrir-cuenta.html" class="btn btn-primary">Abrir Cuenta</a>
+                <a href="https://inversor.inviu.com.ar/login" class="btn btn-outline" target="_blank">CUENTA INVIU</a>
+                <div class="rosval-dropdown" id="rosvalDropdown">
+                    <button class="rosval-btn">
+                        <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores" class="rosval-logo">
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                    </button>
+                    <div class="rosval-menu">
+                        <div class="rosval-label">RosVal</div>
+                        <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
+                            target="_blank">
+                            <i class="fa-solid fa-chart-line"></i> Ver Posición
+                        </a>
+                        <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
+                        </a>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── MOBILE MENU ── -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
+            <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/finanzas.html">Finanzas</a></li>
+            <!-- <li><a href="../pages/quienes-somos.html">Quienes somos</a></li> -->
+             <li><a href="../pages/quienes-somos.html">Quienes somos</a></li>
+<li><a href="../pages/trabaja-con-nosotros.html">Trabajá con nosotros</a></li>
+            <li><a href="../pages/plataforma.html">Plataforma</a></li>
+            <li><a href="../pages/empresas.html" >Empresas</a></li>
+            <li><a href="../pages/como-invertir.html" >¿Como invertir?</a></li>
+            <li>
+                <a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">
+                    Ingresar
+                </a>
+            </li>
+            <li style="margin-top:1rem; padding-top:1rem; border-top: 1px solid #e2e8f0;">
+                <div class="mobile-rosval-logo">
+                    <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores">
+                    <span>RosVal</span>
+                </div>
+                <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
+                    target="_blank"
+                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
+                    <i class="fa-solid fa-chart-line"></i> Ver Posición
+                </a>
+                <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank"
+                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+
+        <!-- ── PAGE HERO ── -->
+        <section class="page-hero">
+          
+            <div class="container page-hero-content">
+                
+                <h1>Empresas / PyME</h1>
+                <p>Soluciones financieras para impulsar el crecimiento de tu empresa en el mercado de capitales.</p>
+            </div>
+        </section>
+
+        <!-- ── SECCIÓN 1: Impulsá tu PyME ── -->
+        <section class="py-5" id="pyme">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+
+                    <!-- Texto -->
+                    <div class="col-12 col-lg-6" data-aos="fade-right">
+                        <!-- <span class="section-badge"><i class="fa-solid fa-building"></i> Empresas & PyMEs</span> -->
+                          <span class="platform-eyebrow"><i class="fa-solid fa-building"></i> Empresas / PyME</span>
+                        <h2 class="mt-3">Impulsá el crecimiento de <span>tu PyME</span></h2>
+                        <p class="mt-3">En Gorostiaga Bursátil te ayudamos a optimizar la gestión financiera de tu empresa con acceso a inversiones, financiamiento y asesoramiento especializado.</p>
+
+                        <h5 class="mt-4 mb-2" style="font-weight:700; color:#1e293b;">¿Qué beneficios obtenés?</h5>
+                        <ul class="beneficios-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Diversificación de inversiones</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mejor gestión de tesorería y liquidez</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Beneficios fiscales a través de cuentas ACDI</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Asesoramiento profesional personalizado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Acceso a instrumentos del mercado de capitales</li>
+                        </ul>
+
+                        <a href="../pages/abrir-cuenta.html" class="btn btn-primary mt-3">Abrí tu cuenta PyME</a>
+                    </div>
+
+                    <!-- Cards de instrumentos -->
+                    <div class="col-12 col-lg-6" data-aos="fade-left">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="instrumento-card">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                    <h5>Acciones</h5>
+                                    <p>Participá del crecimiento de empresas líderes.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="instrumento-card">
+                                    <i class="fa-solid fa-landmark"></i>
+                                    <h5>Bonos</h5>
+                                    <p>Renta fija en pesos o dólares con previsibilidad.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="instrumento-card">
+                                    <i class="fa-solid fa-globe"></i>
+                                    <h5>CEDEARs</h5>
+                                    <p>Acceso a acciones internacionales desde Argentina.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="instrumento-card">
+                                    <i class="fa-solid fa-coins"></i>
+                                    <h5>Fondos Comunes</h5>
+                                    <p>Diversificación gestionada por profesionales.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="instrumento-card">
+                                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                                    <h5>Cheques de Pago Diferido</h5>
+                                    <p>Financiamiento e inversión a través del mercado de capitales, diseñado para potenciar tu negocio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ── SECCIÓN 2: eCheqs ── -->
+        <section class="py-5" style="background: #f8faff; border-top: 1px solid #e2e8f0;" id="echeqs">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+
+                    <!-- Highlight ahorro (izquierda en desktop) -->
+                    <div class="col-12 col-lg-5 order-lg-2" data-aos="fade-left">
+                        <div class="ahorro-highlight">
+                            <h3>Ahorrá hasta</h3>
+                            <div class="ahorro-numero">1,2%</div>
+                            <p class="mt-2">Evitá el impuesto al débito y crédito depositando tus eCheqs directamente en tu cuenta comitente.</p>
+                            <hr style="border-color: rgba(255,255,255,0.2); margin: 1.5rem 0;">
+                            <p class="mb-0" style="font-size:0.95rem;">Mientras los fondos no se utilizan, pueden mantenerse <strong style="color:#facc15;">invertidos y generando rendimiento</strong>, con disponibilidad inmediata cuando los necesités.</p>
+                        </div>
+                    </div>
+
+                    <!-- Texto -->
+                    <div class="col-12 col-lg-7 order-lg-1" data-aos="fade-right">
+                        <span class="platform-eyebrow"><i class="fa-solid fa-file-invoice"></i>eCheqs</span>
+                        <!-- <span class="section-badge"><i class="fa-solid fa-file-invoice"></i> eCheqs</span> -->
+                        <h2 class="mt-3">Convertí tus eCheqs en una <span>herramienta de ahorro y rendimiento</span></h2>
+                        <p class="mt-3">Si tu PyME opera con eCheqs, ahora podés depositar eCheqs con múltiples endosos directamente en tu cuenta comitente y aprovechar una gestión financiera más eficiente.</p>
+
+                        <h5 class="mt-4 mb-2" style="font-weight:700; color:#1e293b;">Beneficios para tu empresa</h5>
+                        <ul class="beneficios-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Menor carga impositiva</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mejor administración de caja</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mayor rendimiento sobre fondos disponibles</li>
+                        </ul>
+
+                        <p class="mt-3">Optimizá la liquidez de tu PyME, reducí costos y hacé que tu dinero trabaje hasta el último momento.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CTA FINAL ── -->
+        <section class="empresas-cta">
+            <div class="container">
+                <h2>¿Listo para hacer crecer tu empresa?</h2>
+                <p>Contactanos y un asesor especializado te guiará en cada paso.</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="../pages/abrir-cuenta.html" class="btn btn-primary">Abrir cuenta PyME</a>
+                    <a href="mailto:contacto@gorostiagabursatil.com" class="btn btn-outline">Contactanos</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+
+                <div class="col-12 col-lg-6">
+                    <div class="footer-brand">
+                        <a href="../index.html" class="logo footer-logo">
+                            <img src="../assets/img/logo_footer.png" alt="Logo gorostiaga bursatil para footer de la web"
+                                class="logo-img">
+                            Gorostiaga<span class="logo-accent">Bursátil</span>
+                        </a>
+                        <p>Agente de Negociación - Matrícula Nº 1636</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Sarmiento 348 Piso 1º CABA</p>
+                        <p><i class="fa-solid fa-phone"></i> 011 3138-8504</p>
+                        <p><i class="fa-regular fa-envelope"></i> contacto@gorostiagabursatil.com</p>
+                        <p><i class="fa-regular fa-envelope"></i> administracion@gorostiagabursatil.com</p>
+                        <p>Expertos en mercado de capitales. Potenciando tu futuro financiero con solidez y confianza.</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/gorostiagabursatil/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@GorostiagaBursatil" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://whatsapp.com/channel/0029VbBltdwD8SE8DawmC30c" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="footer-col mt-4">
+                        <h4>Enlaces útiles</h4>
+                        <ul class="ul-footer">
+                            <li><a href="../pages/quienes-somos.html">Quiénes somos</a></li>
+                            <li><a href="../pages/finanzas.html">Finanzas</a></li>
+                            <li><a href="../pages/plataforma.html">Plataforma</a></li>
+                            <li><a href="../pages/empresas.html">Empresas</a></li>
+                            <li><a href="../pages/abrir-cuenta.html">Abrir cuenta</a></li>
+                            <li><a href="../assets/documentos/pdf/TablaDeAranceles.pdf">Aranceles</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="footer-col mt-4">
+                        <h4>Legales</h4>
+                        <ul class="px-0">
+                            <li><a href="../assets/documentos/pdf/Terminosycondiciones.pdf" target="_blank">Términos y Condiciones</a></li>
+                            <li><a href="../assets/documentos/pdf/CodigoDeConducta.pdf" target="_blank">Código de Conducta</a></li>
+                            <li><a href="../assets/documentos/pdf/RegistroDeIdoneos.pdf" target="_blank">Registro de Idóneos</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos" target="_blank">Registro Público</a></li>
+                            <li><a href="https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio" target="_blank">Marco Regulatorio</a></li>
+                            <li><a href="https://www.cnv.gov.ar/sitioWeb/RegistrosPublicos/Idoneos" target="_blank">Agentes Autorizados</a></li>
+                            <li><a href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor" target="_blank">Defensa al Consumidor</a></li>
+                            <li><a href="https://www.arca.gob.ar/landing/default.asp"><img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="QR AFIP" width="50" height="70"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div>
+                        <p>&copy; 2026 Gorostiaga Bursátil. Todos los derechos reservados.</p>
+                        <div class="cnv-badges">
+                            <span>Agente Registrado CNV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

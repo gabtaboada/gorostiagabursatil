@@ -46,7 +46,52 @@
 
     <script src="./assets/js/main.js" defer></script>
     <style>
-
+/* ── Nav dropdown ── */
+.nav-dropdown {
+    position: relative;
+}
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.nav-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.25s;
+}
+.nav-dropdown:hover .nav-arrow {
+    transform: rotate(180deg);
+}
+.nav-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    min-width: 200px;
+    padding: 10px 0 0.5rem 0;  /* padding-top crea zona de "puente" invisible */
+    list-style: none;
+    z-index: 999;
+}
+.nav-dropdown:hover .nav-submenu {
+    display: block;
+}
+.nav-submenu li a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: #1e293b;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-submenu li a:hover {
+    background: #f1f5f9;
+    color: #1d4ed8;
+}
     </style>
 </head>
 
@@ -57,12 +102,28 @@
                 <img src="./assets/img/logo.png" alt="Gorostiaga Bursátil Logo" class="logo-img">
             </a>
 
-            <nav class="nav header-menu">
+            <!-- <nav class="nav header-menu">
                 <ul class="nav-list">
                     <li><a href="./pages/finanzas.html" class="">Finanzas</a></li>
                     <li><a href="./pages/quienes-somos.html" class="">Quienes somos</a></li>
                     <li><a href="./pages/plataforma.html" class="">Plataforma</a></li>
-                    <!-- <li><a href="#" class="">Aprende</a></li> -->
+                    <li><a href="./pages/empresas.html" class="">Empresas</a></li>
+                </ul>
+            </nav> -->
+            <nav class="nav header-menu">
+                <ul class="nav-list">
+                    <li><a href="./pages/finanzas.html">Finanzas</a></li>
+                    <li class="nav-dropdown">
+                        <a href="./pages/quienes-somos.html" class="nav-dropdown-toggle">
+                            Quienes somos <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                        </a>
+                        <ul class="nav-submenu">
+                            <li><a href="./pages/trabaja-con-nosotros.html">Trabajá con nosotros</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./pages/plataforma.html">Plataforma</a></li>
+                    <li><a href="./pages/empresas.html">Empresas</a></li>
+                    <li><a href="./pages/como-invertir.html" class="">¿Como invertir?</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -100,31 +161,15 @@
             <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
             <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <!--         <ul class="mobile-nav-list">
-            <li><a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">Ingresar</a></li>
-
-            <li style="margin-top:1rem; padding-top:1rem; border-top: 1px solid #e2e8f0;">
-                <div class="mobile-rosval-logo">
-                    <img src="./assets/img/rosario_valores.png" alt="logo Rosario valores">
-                    <span>RosVal</span>
-                </div>
-                <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
-                    target="_blank"
-                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
-                    <i class="fa-solid fa-chart-line"></i> Ver Posición
-                </a>
-                <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank"
-                    style="display:flex; align-items:center; gap:0.5rem; font-size:1rem; font-weight:600; color:#1e3a8a; padding: 0.5rem 0;">
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
-                </a>
-            </li>
-        </ul> -->
+        
         <ul class="mobile-nav-list">
 
             <li><a href="index.html">Finanzas</a></li>
-            <li><a href="./pages/quienes-somos.html">Quienes somos</a></li>
+            <!-- <li><a href="./pages/quienes-somos.html">Quienes somos</a></li> -->
+             <li><a href="./pages/quienes-somos.html">Quienes somos</a></li>
+<li><a href="../pages/trabaja-con-nosotros.html">Trabajá con nosotros</a></li>
             <li><a href="./pages/plataforma.html">Plataforma</a></li>
-            <!-- <li><a href="#">Aprende</a></li> -->
+             <li><a href="./pages/como-invertir.html" class="">¿Como invertir?</a></li>
 
             <li>
                 <a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">
@@ -592,100 +637,6 @@
             </div>
         </section>
 
-
-        <!-- <section class="hero-phone">
-
-            <div class="container">
-
-                <div class="hero-phone-wrapper">
-
-                    <div class="hero-phone-content">
-                        <span class="hero-badge">
-                            Plataforma de inversión
-                        </span>
-
-                        <h1>
-                            Invertí desde una app moderna y simple
-                        </h1>
-
-                        <p>
-                            Accedé a CEDEARs, dólar MEP y acciones desde cualquier lugar.
-                        </p>
-
-                        <a href="#" class="btn-primary">
-                            Abrir cuenta
-                        </a>
-                    </div>
-
-                    <div class="phone-scene">
-
-                        <div class="phone-device">
-                            <img src="./assets/img/ac_cel.png" alt="">
-                        </div>
-                        <div class="floating-market-card floating-card-1">
-
-                            <small class="market-label">
-                                Mercado local
-                            </small>
-
-                            <h4>
-                                Accedé a acciones del mercado local
-                            </h4>
-
-                            <div class="market-logos">
-
-                                <div class="market-logo">
-                                    <img src="./assets/img/YPF.jpeg" alt="YPF">
-                                </div>
-
-                                <div class="market-logo">
-                                    <img src="./assets/img/pampa.jpeg" alt="Pampa">
-                                </div>
-
-                                <div class="market-logo">
-                                    <img src="./assets/img/galicia.jpeg" alt="Galicia">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="floating-market-card floating-card-2">
-
-                            <small class="market-label">
-                                Global
-                            </small>
-
-                            <h4>
-                                Accedé a empresas de todo el mundo
-                            </h4>
-
-                            <div class="market-logos">
-
-                                <div class="market-logo">
-                                    <img src="./assets/img/apple.jpeg" alt="Apple">
-                                </div>
-
-                                <div class="market-logo">
-                                    <img src="./assets/img/microsoft.jpeg" alt="Microsoft">
-                                </div>
-
-                                <div class="market-logo">
-                                    <img src="./assets/img/google.jpeg" alt="Google">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section> -->
     </main>
 
     <footer class="footer">
@@ -739,6 +690,7 @@
                             <li><a href="./pages/finanzas.html">Finanzas</a></li>
                             <li><a href="./pages/plataforma.html">Plataforma</a></li>
                             <li><a href="./pages/abrir-cuenta.html">Abrir cuenta</a></li>
+                            <li><a href="../pages/empresas.html">Empresas</a></li>
                             <!-- <li><a
                                     href="/cdn-cgi/l/email-protection#593a36372d383a2d36193e362b362a2d30383e383b2c2b2a382d3035773a3634">Contacto</a>
                             </li> -->
@@ -789,13 +741,7 @@
 
             </div>
         </div>
-        <!-- <div class="footer-bottom">
-            <p>&copy; 2026 Gorostiaga Bursátil. Todos los derechos reservados.</p>
-            <div class="cnv-badges">
-                <span>Agente Registrado CNV</span>
-            </div>
-        </div> -->
-        <!-- </div> -->
+    
     </footer>
     <script>
         AOS.init();

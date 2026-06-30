@@ -347,12 +347,6 @@ img {
     justify-content: center;
 }
 
-/* .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-} */
 
 .hero-content h1 {
     font-family: var(--font-heading);
@@ -365,8 +359,7 @@ img {
 .hero-content p {
     font-size: 1.25rem;
     color: var(--text-light);
-    /*  margin-bottom: 2.5rem;
-    max-width: 500px;*/
+
 }
 
 .badge {
@@ -2781,7 +2774,92 @@ img {
 .ig-follow-btn:hover {
     transform: translateY(-3px);
 }
+/* pagina EMPRESAS*/
+/* ── Beneficios pagina empresas ── */
+        .beneficios-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .beneficios-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.6rem 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text, #1e293b);
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .beneficios-list li:last-child { border-bottom: none; }
+        .beneficios-list li i {
+            color: #1e3a8a;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
 
+        /* ── Instrumentos cards ── pagina empresas */
+        .instrumento-card {
+            background: #f8faff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            height: 100%;
+            transition: box-shadow 0.2s;
+        }
+        .instrumento-card:hover {
+            box-shadow: 0 4px 20px rgba(30,58,138,0.10);
+        }
+        .instrumento-card i {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        .instrumento-card h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+        .instrumento-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* ── Ahorro highlight ── pagina empresas */
+        .ahorro-highlight {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: #fff;
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+        }
+        .ahorro-highlight h3 { font-weight: 800; }
+        .ahorro-highlight .ahorro-numero {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #facc15;
+        }
+        .ahorro-highlight p { color: #e2e8f0; }
+
+        /* ── CTA section ──  pagina empresas*/
+        .empresas-cta {
+            background: #f8faff;
+            border-top: 1px solid #e2e8f0;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .empresas-cta h2 {
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        .empresas-cta p {
+            color: #64748b;
+            max-width: 560px;
+            margin: 0 auto 2rem;
+        }
 /* =========================================================
    RESPONSIVE
 ========================================================= */

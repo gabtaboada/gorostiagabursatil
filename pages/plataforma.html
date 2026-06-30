@@ -32,7 +32,33 @@
     <!-- js -->
     <script src="../assets/js/main.js" defer></script>
     <style>
-
+.instrumento-card {
+    background: #f8faff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    transition: box-shadow 0.2s;
+}
+.instrumento-card:hover {
+    box-shadow: 0 4px 20px rgba(30,58,138,0.10);
+}
+.instrumento-card i {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+.instrumento-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+.instrumento-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
     </style>
 
 <body>
@@ -48,7 +74,8 @@
                     <li><a href="../pages/finanzas.html" class="">Finanzas</a></li>
                     <li><a href="../pages/quienes-somos.html" class="">Quienes somos</a></li>
                     <li><a href="../pages/plataforma.html" class="active">Plataforma</a></li>
-                    <!-- <li><a href="#" class="">Aprende</a></li> -->
+                    <li><a href="../pages/empresas.html" class="">Empresas</a></li>
+                    <li><a href="../pages/como-invertir.html" class="">¿Como invertir?</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -75,29 +102,6 @@
         </div>
     </header>
 
-    <!-- <div class="mobile-menu">
-        <div class="mobile-menu-header">
-            <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
-            <button class="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <ul class="mobile-nav-list">
-            <li><a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">Ingresar</a></li>
-            <li style="margin-top:1rem; padding-top:1rem; border-top: 1px solid #e2e8f0;">
-                <div class="mobile-rosval-logo">
-                    <img src="../assets/img/rosario_valores.png" alt="logo Rosario valores"><span>RosVal</span>
-                </div>
-                <a href="https://virtualbroker-gorostiagabursatil.aunesa.com/auth/signin?callbackUrl=%2F"
-                    target="_blank"
-                    style="display:flex;align-items:center;gap:0.5rem;font-size:1rem;font-weight:600;color:#1e3a8a;padding:0.5rem 0;">
-                    <i class="fa-solid fa-chart-line"></i> Ver Posición
-                </a>
-                <a href="https://dma1.rosval.com.ar/#/auth/login" target="_blank"
-                    style="display:flex;align-items:center;gap:0.5rem;font-size:1rem;font-weight:600;color:#1e3a8a;padding:0.5rem 0;">
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i> Operar Online
-                </a>
-            </li>
-        </ul>
-    </div> -->
     <div class="mobile-menu">
         <div class="mobile-menu-header">
             <span class="logo mobile-logo">Gorostiaga<span class="logo-accent">Bursátil</span></span>
@@ -107,9 +111,12 @@
         <ul class="mobile-nav-list">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../pages/finanzas.html">Finanzas</a></li>
-            <li><a href="../pages/quienes-somos.html">Quienes somos</a></li>
+            <!-- <li><a href="../pages/quienes-somos.html">Quienes somos</a></li> -->
+             <li><a href="../pages/quienes-somos.html">Quienes somos</a></li>
+<li><a href="../pages/trabaja-con-nosotros.html">Trabajá con nosotros</a></li>
             <li><a href="../pages/plataforma.html">Plataforma</a></li>
-            <!-- <li><a href="#">Aprende</a></li> -->
+            <li><a href="../pages/empresas.html" class="">Empresas</a></li>
+            <li><a href="../pages/como-invertir.html" class="">¿Como invertir?</a></li>
 
             <li>
                 <a href="https://inversor.inviu.com.ar/login" class="btn btn-primary mobile-cta">
@@ -144,12 +151,7 @@
                 <h1>
                     Plataformas
                 </h1>
-                <!--                 
-                    <p>
-                        Accedé al mercado de capitales argentino a través de una plataforma moderna,
-                        simple y segura. Invertí en acciones, bonos, CEDEARs y dólar MEP con el
-                        acompañamiento de Gorostiaga Bursátil.
-                    </p> -->
+
 
             </div>
             <div class="hero-features">
@@ -322,7 +324,7 @@
                 <div class="platform-section-header">
                     <span class="platform-eyebrow">
                         <i class="fa-solid fa-chart-simple"></i>
-                        Operatoria profesional
+                        Operatoria internacional
                     </span>
 
                     <h2 class="platform-title fenix-title">
@@ -460,6 +462,67 @@
                     </div>
                 </div>
         </section>
+<!-- ── FIDEICOMISOS ── -->
+        <section class="py-5" style="background: #f8faff; border-top: 1px solid #e2e8f0;" id="fideicomisos">
+            <div class="container">
+
+                <div class="row justify-content-start mb-5" data-aos="fade-up">
+                    <div class="col-12 col-lg-8 text-left">
+                        <span class="platform-eyebrow"><i class="fa-solid fa-scale-balanced"></i>Estructuración</span>
+                        <!-- <span class="section-badge"><i class="fa-solid fa-scale-balanced"></i> Estructuración</span> -->
+                         <h2 class="platform-title fenix-title">
+<!-- 
+                        <img src="../assets/img/logo_fenix.svg" class="logos-plataformas" alt="Fenix Securities"> -->
+
+                        <span class="text-gradient">
+                            Fideicomisos y Estructuración Patrimonial
+                        </span>
+
+                    </h2>
+<!--                     
+                        <h2 class="mt-3 platform-title fenix-title">Fideicomisos y <span>Estructuración Patrimonial</span></h2> -->
+                        <p class="mt-3">Diseñamos y administramos estructuras fiduciarias orientadas a la protección patrimonial, la planificación sucesoria y la garantía de obligaciones, brindando seguridad jurídica, eficiencia operativa y administración profesional.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="0">
+                        <div class="instrumento-card h-100">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <h5>Fideicomisos de Administración</h5>
+                            <p>Gestión profesional de activos mediante patrimonios autónomos.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="instrumento-card h-100">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h5>Fideicomisos de Garantía</h5>
+                            <p>Protección de bienes y respaldo eficiente para obligaciones contractuales.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="instrumento-card h-100">
+                            <i class="fa-solid fa-people-roof"></i>
+                            <h5>Planificación Sucesoria</h5>
+                            <p>Transmisión ordenada del patrimonio, evitando conflictos y optimizando costos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center" data-aos="fade-up">
+                    <div class="col-12 col-lg-10">
+                        <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem 2rem; display: flex; gap: 1.25rem; align-items: flex-start;">
+                            <i class="fa-solid fa-circle-info" style="color: #1e3a8a; font-size: 1.4rem; margin-top: 2px; flex-shrink: 0;"></i>
+                            <p style="margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.7;">
+                                Complementamos nuestras estructuras con <strong>asesoramiento legal, contable, impositivo y de cumplimiento normativo (PLA/FT)</strong> para garantizar una implementación integral y eficiente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
     <!-- ── FOOTER (igual que index) ── -->
     <footer class="footer">
@@ -513,6 +576,7 @@
                             <li><a href="../pages/finanzas.html">Finanzas</a></li>
                             <li><a href="../pages/plataforma.html">Plataforma</a></li>
                             <li><a href="../pages/abrir-cuenta.html">Abrir cuenta</a></li>
+                            <li><a href="../pages/empresas.html">Empresas</a></li>
                             <li><a href="../assets/documentos/pdf/TablaDeAranceles.pdf">Aranceles</a></li>
                         </ul>
 
@@ -562,7 +626,9 @@
         </div>
 
     </footer>
-
+   <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
