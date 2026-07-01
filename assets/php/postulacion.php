@@ -92,7 +92,8 @@ try {
     // ==========================
     $mail->addAddress(
         /*'contacto@gorostiagabursatil.com',*/
-        'gabpaginasinternet@gmail.com',
+        /*'gabpaginasinternet@gmail.com',*/
+        'Juan.veglia@hotmail.com',
         'Gorostiaga Bursátil'
     );
  

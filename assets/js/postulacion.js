@@ -25,7 +25,7 @@ if (formPostulacion) {
             const formData = new FormData(formPostulacion);
             formData.append('recaptcha_token', token);
 
-            const response = await fetch('../php/postulacion.php', {
+            const response = await fetch('../assets/php/postulacion.php', {
                 method: 'POST',
                 body: formData
             });

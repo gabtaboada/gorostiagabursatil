@@ -1271,7 +1271,52 @@ img {
 .rosval-dropdown.open .rosval-logo {
     content: url("images/rosario_valores_blanco.png");
 }
-
+/* ── Nav dropdown ── */
+.nav-dropdown {
+    position: relative;
+}
+.nav-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.nav-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.25s;
+}
+.nav-dropdown:hover .nav-arrow {
+    transform: rotate(180deg);
+}
+.nav-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    min-width: 200px;
+    padding: 10px 0 0.5rem 0;
+    list-style: none;
+    z-index: 999;
+}
+.nav-dropdown:hover .nav-submenu {
+    display: block;
+}
+.nav-submenu li a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    color: #1e293b;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-submenu li a:hover {
+    background: #f1f5f9;
+    color: #1d4ed8;
+}
 
 /*finanzas*/
 /* ── SECCIÓN REPORTES ── */
